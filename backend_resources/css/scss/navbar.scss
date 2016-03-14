@@ -1,0 +1,227 @@
+/************************* Navigation *************************/
+
+body {
+  background-color: $white;
+  margin: 0px;
+  padding: 0px;
+  font-family: $helvetica;
+}
+.navigation {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  padding-bottom: 10px;
+  background-color: $white;
+}
+a.mobile {
+  display: none;
+}
+nav {
+  max-width: 940px;
+  min-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+  display: table;
+  font-family: $open-sans;
+  text-transform: uppercase;
+  font-weight: bold;
+  @include font-size(1.4);
+  @include medium-screen {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+  a {
+    color: #999;
+    text-decoration: none;
+    display: inline-block;
+    @include medium-screen {
+      display: block;
+    }
+    img {
+      display: block;
+      vertical-align: top;
+      @include transition(all .3s);
+      @include medium-screen {
+        float: left;
+        display: inline;
+        width: auto;
+        max-width: 27rem;
+        display: block;
+        float: none;
+        margin: 0 auto;
+      }
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+  > ul {
+    display: table;
+    width: 100%;
+    padding: 0px;
+    margin: auto;
+    border-top: 1px solid orange;
+    border-bottom: 1px solid orange;
+    > li {
+      display: table-cell;
+      width: 20%;
+      margin: auto;
+      float: none;
+      text-align: center;
+      > a {
+        margin: auto;
+        display: block;
+        white-space: nowrap;
+        padding: 10px;
+      }
+    }
+  }
+  ul {
+    @include medium-screen {
+      position: absolute;
+      width: 93.75%;
+      height: 0;
+      max-height: 0;
+      top: 54px;
+      right: 3.125%;
+      overflow: hidden;
+      display: inline-block;
+      background: $white-grey;
+      border: none;
+    }
+    ul {
+      display: none;
+      list-style-type: none;
+      clear: both;
+      text-align: left;
+      float: left;
+      position: absolute;
+      background: $white;
+      border-top: 1px solid $orange;
+      min-width: 18em;
+      width: 10%;
+      z-index: 999;
+      li {
+        line-height: 2em;
+        height: auto;
+        padding:0em;
+        border-bottom: 1px solid $light-grey;
+        a {
+	        padding: 10px 20px;
+	        display:block;
+        }
+      }
+    }
+    li{
+      @include medium-screen {
+        display: block;
+        width: 100%;
+        border-right: 0;
+      }
+    }
+    li:hover > {
+      ul {
+        display: block;
+        margin: 0;
+        height: auto;
+        padding: 0;
+        -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3);
+      }
+      a {
+        color: $black;
+      }
+    }
+    > li > ul > li:hover {
+      background: $white-grey;
+      > a {
+        color: $black;
+        background: $white-grey;
+      }
+    }
+  }
+}
+
+/*login-menu at the top of the index (all pages)*/
+
+div.login-menu {
+  display: inline block;
+  float: right;
+  margin-top: 70px;
+  @include medium-screen {
+    margin: 0 5% -2px auto;
+  }
+  div.login-tab{
+    display: inline-block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: $orange;
+    padding: 5px;
+    @include medium-screen {
+      width: auto;
+    }
+    a{
+      color: $black;
+    }
+  }
+}
+
+/************************* Mobile Nav *************************/
+@include medium-screen {
+  div.toggle.mobile {
+    width: 100%;
+    display: inline-block;
+    &.active > a {
+      background: $white-grey;
+    }
+  }
+  a.toggle.mobile {
+    max-width: 90%;
+    float: none;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+  }
+  nav {
+    ul.active {
+      height: auto;
+      max-height: 600px;
+      width: 90%;
+      z-index: 999;
+      transition-duration: 0.5s;
+      position: absolute;
+      top: 130px;
+      //change "top" to 160px when add in top tab menu!
+      left: 3.125%;
+      > li {
+        border-top: 1px solid $light-grey;
+      }
+      &:last-child {
+        @include border-radius(4px);
+      }
+      ul {
+        display: none;
+        max-height: 0px;
+        border-top: none;
+      }
+    }
+    a.mobile {
+      color: $black;
+      @include font-size(1.8);
+      text-align: center;
+      float: right;
+      display: inline-block;
+      right: 5px;
+      top: 5px;
+      background: orange;
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      @include border-radius(4px);
+      &:hover {
+        background: $white-grey;
+      }
+    }
+  }
+}

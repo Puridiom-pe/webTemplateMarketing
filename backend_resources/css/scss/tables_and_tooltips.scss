@@ -1,0 +1,180 @@
+/**
+* Gumby Framework
+* ---------------
+*
+* Follow @gumbycss on twitter and spread the love.
+* We worked super hard on making this awesome and released it to the web.
+* All we ask is you leave this intact. #gumbyisawesome
+*
+* Gumby Framework
+* http://gumbyframework.com
+*
+* Built with love by your friends @digitalsurgeons
+* http://www.digitalsurgeons.com
+*
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+*/
+
+/* Tables */
+
+#compare {
+  text-align: left;
+  border-collapse: collapse;
+  th {
+    padding: 12px 17px 12px 17px;
+    font-weight: bold;
+    font-family: $open-sans;
+    text-transform: uppercase;
+    @include font-size(1.6);
+    color: $black;
+    border-bottom: 1px solid $black;
+  }
+  td {
+    padding: 7px 17px 7px 17px;
+    color: $grey;
+    font-family: $open-sans;
+    font-weight: bold;
+    @include font-size(1.4);
+    @include transition(all .3s);
+    p {
+      font-family: $helvetica;
+      font-weight: normal;
+      color: $grey;
+      @include font-size(1.4);
+    }
+  }
+  tbody tr:hover td p {
+    color: $black;
+    @include transition(all .2s);
+  }
+}
+
+table {
+  background: $white;
+ @include border-radius(3px);
+  width: 100%;
+  margin: 0 0 18px;
+  border: 1px solid $light-grey;
+  thead {
+    background: $white-grey;
+    tr th {
+      padding: 8px 10px 9px;
+      @include font-size(1.4);
+      font-weight: bold;
+      color: $black;
+      &:first-child {
+        border-left: none;
+      }
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+  tbody tr {
+    &.even, &.alt, &:nth-child(even) {
+      background: #f1f8fe;
+    }
+    td {
+      color: $grey;
+      padding: 9px 10px;
+      vertical-align: top;
+      border: none;
+      @include font-size(1.2);
+      line-height: 1.8em;
+      text-align: left;
+    }
+  }
+}
+
+/* Tooltips */
+.ttip {
+  position: relative;
+  a{
+    cursor: default;
+  }
+  &:after {
+    display: block;
+    background: $orange;
+    border: 1px solid $orange;
+    border-bottom: 0;
+    @include border-radius(3px);
+    padding: 0.5em 0.75em;
+    width: 250px;
+    min-width: 130px;
+    max-width: 500px;
+    position: absolute;
+    left: -50%;
+    bottom: 101%;
+    margin-bottom: 8px;
+    text-align: left;
+    color: $black;
+    content: attr(data-tooltip);
+    line-height: 1.25em;
+    @include font-size(1.6);
+    font-family: $helvetica;
+    font-weight: normal;
+    font-style: normal;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    pointer-events: none;
+    background-color: $orange;
+    @include transition(opacity 0.1s ease);
+    @include medium-screen {
+      display: none;
+    }
+  }
+  &:before {
+    content: " ";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 101%;
+    left: 40%;
+    border-top: 9px solid $black !important;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    pointer-events: none;
+    @include transition(opacity 0.1s ease);
+    @include medium-screen {
+      display: none;
+    }
+  }
+  &:hover {
+    &:after, &:before {
+      @include transition(opacity 0.1s ease);
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+      opacity: 1;
+    }
+  }
+}
+
+/* SHAME */
+
+.ie8 {
+  .xxwide, .xwide, .wide, .normal, .narrow, .xnarrow {
+    display: inline;
+  }
+  .xxwide + input, .xwide + input, .wide + input, .normal + input, .narrow + input, .xnarrow + input {
+    display: inline;
+    margin: 0 0 0 -0.25em;
+  }
+  .ttip {
+    &:before, &:after {
+      display: none;
+    }
+    &:hover {
+      &:before, &:after {
+        display: block;
+      }
+    }
+  }
+}
+
+.ie9 {
+  .radio.checked i, .checkbox.checked i {
+    top: 0;
+  }
+}

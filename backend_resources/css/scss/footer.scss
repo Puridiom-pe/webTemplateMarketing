@@ -1,0 +1,96 @@
+/************************* Footer *************************/
+
+.container.footer .row {
+  max-width: 1250px;
+}
+
+.footer {
+  background-color: $white-grey;
+  color: black;
+  padding-top: 2.0em;
+  padding-bottom: 2.0em;
+  font-family: $open-sans;
+  font-weight: bold;
+  width: 100%;
+  bottom:0;
+  right:0;
+  @include box-sizing(border-box);
+  @include font-size(1.6);
+  ul {
+    list-style: none;
+  }
+  a img {
+    max-width: 100%;
+    &:hover {
+      opacity: 0.75;
+      filter: alpha(opacity = 75);
+      @include transition(all .3s);
+    }
+  }
+  div ul {
+    padding-top: 1.0em;
+  }
+  li.contact {
+    color: $grey;
+  }
+  ul.contact {
+    padding-left: 20%;
+  }
+  a {
+    text-decoration: none;
+    color: $grey;
+    &:hover {
+      color: $blue;
+    }
+  }
+  .footernav a {
+    text-transform: uppercase;
+    @include transition(all .3s);
+  }
+  .mobile-show{
+    /*Below hides mobile content that should not be visible until mobile view*/
+    display: none;
+    @include big-screen{
+      /*This displays mobile content that was not visible in normal view.*/
+      display: block;
+      width: 100%;
+      float: none;
+      margin: 0 auto 25px auto;
+      > div {
+        width: 30%;
+        min-width: 20rem;
+        float: none;
+        margin: 0 auto;
+        > div {
+          display: inline;
+          margin-left: 10%;
+        }
+      }
+    }
+  }
+}
+
+/************************* Condensed Mobile Footer *************************/
+@include big-screen {
+  /*Below hides the ul>ul sections in mobile*/
+  div.footer {
+    .hide-mobile {
+      display: none;
+    }
+    div {
+      &.social {
+        width: 100%;
+        > a {
+          padding: 1em;
+        }
+      }
+      &.logo {
+        max-width: 27rem;
+        width: 100%;
+        > img {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

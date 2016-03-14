@@ -1,0 +1,1777 @@
+/*************************** BASICS ***************************/
+
+body {
+  line-height: 1.6;
+  color: $grey;
+}
+
+p {
+  padding-bottom: 15px;
+  @include font-size(1.6);
+}
+
+a {
+  cursor: pointer;
+}
+
+h1 {
+  @include font-size(4.6);
+  margin-bottom: 12px;
+}
+
+h2 {
+  @include font-size(3.9);
+  margin-bottom: -9px;
+}
+
+h3 {
+  @include font-size(2.9);
+  margin-bottom: 9px;
+}
+
+h4 {
+  @include font-size(2.5);
+  margin-bottom: 9px;
+}
+
+h5 {
+  @include font-size(1.9);
+  font-weight: normal;
+  margin-bottom: 9px;
+}
+
+h6 {
+  @include font-size(1.5);
+  font-weight: normal;
+}
+
+/* Note: Use below sections as classes to change the appearance of paragraph elements and non .heading h-elements*/
+/*************************** Font-sizes ***************************/
+
+.text-8 {
+  @include font-size(0.8);
+}
+
+.text-10 {
+  @include font-size(1.0);
+}
+
+.text-11 {
+  @include font-size(1.1);
+}
+
+.text-12 {
+  @include font-size(1.2);
+}
+
+.text-13 {
+  @include font-size(1.3);
+}
+
+.text-14 {
+  @include font-size(1.4);
+}
+
+.text-15 {
+  @include font-size(1.5);
+}
+
+.text-16 {
+  @include font-size(1.6);
+}
+
+.text-17 {
+  @include font-size(1.7);;
+}
+
+.text-18 {
+  @include font-size(1.8);
+}
+
+.text-19 {
+  @include font-size(1.9);
+}
+
+.text-20 {
+  @include font-size(2.0);
+}
+
+.text-25 {
+  @include font-size(2.5);
+}
+
+.text-29 {
+  @include font-size(2.9);
+}
+
+.text-39 {
+  @include font-size(3.9);
+}
+
+.text-46 {
+  @include font-size(4.6);
+}
+
+/*************************** Font colors ***************************/
+
+.black {
+  color: $black;
+  @include transition(all 0.25s);
+}
+
+.white {
+  color: $white;
+  @include transition(all 0.25s);
+}
+
+.orange {
+  color: $orange;
+  @include transition(all 0.25s);
+}
+
+.light-orange {
+  color: $light-orange;
+  @include transition(all 0.25s);
+}
+
+.blue {
+  color: $blue;
+  @include transition(all 0.25s);
+}
+
+.grey {
+  color: $grey;
+  @include transition(all 0.25s);
+}
+
+/*************************** Font-faces ***************************/
+
+.helv {
+  font-family: $helvetica;
+}
+
+.sans {
+  font-family: $open-sans;
+}
+
+.lato {
+  font-family: $lato;
+}
+
+/*************************** Other font-related ***************************/
+
+.center {
+  text-align: center;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.shadow {
+  text-shadow: 1.5px 1.5px 1.5px $black;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.x-bold {
+  font-weight: 900;
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+.lower {
+  text-transform: lowercase;
+}
+
+.nounderline {
+  text-decoration: none;
+}
+
+.word-wrap {
+  word-wrap: break-word;
+}
+
+.medium-though-small-screen-only{
+  display:none;
+  @include big-screen{
+    display:none;
+  }
+  @include medium-screen{
+    display:block;
+  }
+  @include medium-small-screen{
+    display:block;
+  }
+  @include small-screen{
+    display:block;
+  }
+}
+.medium-though-small-screen-no-show{
+  @include medium-screen{
+    display:none;
+  }
+  @include medium-small-screen{
+    display:none;
+  }
+  @include small-screen{
+    display:none;
+  }
+}
+
+
+
+.medium-screen-no-show{
+  @include medium-screen{
+    display:none;
+  }
+}
+.medium-screen-only{
+  display:none;
+  @include big-screen{
+    display:none;
+  }
+  @include medium-screen{
+    display:inline;
+  }
+  @include medium-small-screen{
+    display:none;
+  }
+  @include small-screen{
+    display:none;
+  }
+}
+
+.medium-small-screen-no-show{
+  @include medium-small-screen{
+    display:none;
+  }
+}
+.medium-small-screen-only{
+  display:none;
+  @include big-screen{
+    display:none;
+  }
+  @include medium-screen{
+    display: none;
+  }
+  @include medium-small-screen{
+    display:inline;
+  }
+  @include small-screen{
+    display:none;
+  }
+}
+
+.mobileNoShow{
+  @include small-screen{
+    display:none;
+  }
+}
+.mobileOnly{
+  display:none;
+  @include big-screen{
+    display:none;
+  }
+  @include medium-screen{
+    display:none;
+  }
+  @include small-screen{
+    display:inline;
+  }
+}
+
+a.blue.nounderline:visited {
+  color: $blue;
+}
+
+/*************************** Lists ***************************/
+
+.square-list {
+  list-style-type: square;
+  padding-left: 50px;
+  line-height: 2em;
+  @include font-size(1.6);
+  &.left-justify{
+    padding-left: 0px;
+  }
+}
+
+ul.square-list-sans {
+  list-style-type: square;
+  font-family: $open-sans;
+  font-weight: bold;
+  /*EXTEND*/
+  padding-left: 50px;
+  line-height: 2em;
+  @include font-size(1.6);
+  &.left-justify{
+    padding-left: 0px;
+  }
+}
+
+p.square-list-sans {
+  font-family: $open-sans;
+  font-weight: bold;
+
+  &.left{
+    padding-left: 0px;
+  }
+}
+ul.check-list{
+  font-family: $open-sans;
+  font-weight: bold;
+  line-height: 2em;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 1em;
+  text-indent: -1em;
+  @include font-size(1.6);
+}
+ul.check-list li{
+  padding-left: 10px;
+}
+ul.check-list li:before{
+  content:"\2714";
+}
+
+/*************************** Content elements: heading, subheading, orange-text; ***************************/
+/*Used on most pages!!!*/
+
+h4.heading {
+  color: $black;
+  font-family: $open-sans;
+  font-weight: bold;
+  @include font-size(2.9);
+}
+
+/*EXTEND*/
+
+p {
+  &.subheading {
+    color: $black;
+    font-family: $open-sans;
+    font-weight: bold;
+    @include font-size(2.0);
+  }
+  &.orange-text {
+    text-align: center;
+    font-weight: bold;
+    color: $orange;
+    @include font-size(1.6);
+  }
+}
+
+/*************************** Quotes ***************************/
+/*Wrapper: put in div around entire quote*/
+/*Quote: put around quoted text in quote*/
+/*Attribution: put around attribution in quote*/
+
+.quote {
+  padding: 2.0em;
+  background: $light-grey;
+  margin-top: 20px;
+  .words {
+    @include font-size(1.6);
+    color: $black;
+    font-family: $helvetica;
+  }
+  p.atrib {
+    color: $grey;
+    font-family: $open-sans;
+    font-weight: bold;
+    text-align: right;
+    @include font-size(1.5);
+  }
+}
+
+/*************************** Page sections ***************************/
+/*Used to include a section with a large blue or grey background that spans the entire width of the page.*/
+/*Use .main-section to define the main body of a page, after the banner.*/
+
+.blue-section {
+  background-color: $blue-grey;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.light-blue-section {
+  background-color: $white-grey;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.white-section{
+  background-color: $white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.main-section {
+  background-color: $white;
+  padding-bottom: 50px;
+}
+
+
+/*.page-divider denotes the portion of a page that denotes the title of a subsection, such as on the Resources page*/
+
+div {
+  &.page-divider {
+    margin: 50px auto 30px;
+  }
+  &.partnership {
+    margin: 40px auto 10px;
+    padding: 1%;
+    border: 2px solid $orange;
+    @include border-radius(10px);
+  }
+}
+
+/*.partnership is used to define subsections on the partner and about pages*/
+
+/*************************** Line types ***************************/
+
+.orange-line {
+  color: $orange;
+  background-color: $orange;
+  border: 0;
+  height: 1px;
+  margin: 5px auto;
+}
+
+.bold-orange-line {
+  color: $orange;
+  background-color: $orange;
+  border: 0;
+  height: 2px;
+  margin: 5px auto;
+}
+
+.white-line {
+  color: $white;
+  background-color: $white;
+  border: 0;
+  height: 1px;
+  margin: 5px auto 20px;
+}
+
+.blue-line {
+  color: $blue;
+  background-color: $blue;
+  border: 0;
+  height: 1px;
+  margin: 5px auto;
+}
+
+.black-line {
+  color: $black;
+  background-color: $black;
+  border: 0;
+  height: 1px;
+}
+
+.grey-line{
+  color: $grey;
+  background-color: $grey;
+  border: 0;
+  height: 1px;
+}
+
+.light-orange-line{
+  color: $light-orange;
+  background-color: $light-orange;
+  border: 0;
+  height: 1px;
+}
+
+.bold-light-orange-line {
+  color: $light-orange;
+  background-color: $light-orange;
+  border: 0;
+  height: 2px;
+  margin: 5px auto;
+}
+
+
+
+/*************************** Youtube Videos ***************************/
+/*Styles for vid1 on about page and vid2 on solutions page*/
+
+div.video-wrapper {
+  position: relative;
+  padding-top: 35px;
+  height: 0;
+  overflow: hidden;
+  &.vid1 {
+    padding-bottom: 60%;
+  }
+  &.vid2 {
+    padding-bottom: 35%;
+  }
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/*************************** Calls to Action: This is very important; ***************************/
+
+.cta {
+  width: 100%;
+  margin: 25px auto;
+  a {
+    font-family: $open-sans;
+    color: $black;
+    @include font-size(1.6);
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    background: $orange;
+    border: 2px solid $orange;
+    padding: 18px;
+    display: block;
+    @include transition(all .3s);
+    &:hover {
+      border: 2px solid $black;
+      @include transition(all .3s);
+    }
+  }
+  h4 {
+    @include font-size(2.5);
+    margin-bottom: 20px;
+  }
+  hr.black-line {
+    width: 100%;
+    margin: 16px auto 18px;
+  }
+}
+.pugc-register{
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  @include medium-small-screen{
+    width:40%;
+  }
+  @include small-screen{
+    width:80%;
+  }
+  >a{
+    //@include transition(all .3s);
+    &:hover {
+      background: $black;
+      border: 2px solid $black;
+      @include transition(all .3s);
+    }
+  }
+}
+
+/*************************** MENUS ***************************/
+
+/* . on Index page */
+
+.blue-menu a {
+  font-family: $open-sans;
+  color: $black;
+  @include font-size(1.3);
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 20px;
+  display: block;
+  @include transition(all .3s);
+  &:hover {
+    text-align: center;
+    background: $white-grey;
+    padding: 20px;
+    box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.2);
+    display: block;
+    @include transition(all .3s);
+  }
+}
+
+/*.orange-menu on solutions, services, resources, index, and about pages*/
+
+.orange-menu {
+  > .row {
+    @include box-sizing(border-box);
+  }
+  &.row div {
+    margin-bottom: 20px;
+    a {
+      font-family: $open-sans;
+      color: $black;
+      @include font-size(1.4);
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      background: $light-grey;
+      padding: 20px;
+      display: block;
+      @include transition(all .3s);
+      &:hover {
+        background: $orange;
+        text-align: center;
+        padding: 20px;
+        display: block;
+        @include transition(all .3s);
+      }
+    }
+  }
+  &.solutions div a {
+    height: 85px;
+    line-height: 1em;
+  }
+  &.learn div {
+    position: relative;
+    a{
+      @include font-size(1.9);
+      max-height: 180px;
+      font-weight: bold;
+      text-transform: none;
+      display: block;
+      overflow: hidden;
+      &:hover {
+        max-height: 180px;
+      }
+    }
+  }
+}
+
+.orange-menu-solutions {
+  > .row {
+    @include box-sizing(border-box);
+  }
+  &.row {
+    .orange-menu-title-row{
+    margin-bottom: 20px;
+    a {
+      font-family: $open-sans;
+      color: $black;
+      @include font-size(1.4);
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      background: $light-grey;
+      padding: 20px;
+      display: block;
+      @include transition(all .3s);
+      &:hover {
+        background: $orange;
+        text-align: center;
+        padding: 20px;
+        display: block;
+        @include transition(all .3s);
+      }
+    }
+  }
+  }
+  &.solutions div a {
+    height: 85px;
+    line-height: 1em;
+  }
+  &.learn div {
+    position: relative;
+    a{
+      @include font-size(1.9);
+      max-height: 180px;
+      font-weight: bold;
+      text-transform: none;
+      display: block;
+      overflow: hidden;
+      &:hover {
+        max-height: 180px;
+      }
+    }
+  }
+  &.solutions_sub_modules{
+    .border-style-1{
+      border: 2px solid black;
+      border-radius: 5px;
+      }
+    }
+}
+
+
+/*Tooltip menu on the solutions-->procure-to-pay page*/
+
+.p2p-tooltip-menu a {
+  font-family: $open-sans;
+  color: $black;
+  @include font-size(1.3);
+  text-align: center;
+  font-weight: bold;
+  background: $white-grey;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: block;
+  @include transition(all .3s);
+  &:hover {
+    text-align: center;
+    background: $white;
+    display: block;
+    padding: 20px;
+    box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.2);
+    @include transition(all .3s);
+  }
+}
+
+/*Menu on the services-->Platforms page*/
+
+.service-platforms-menu {
+  div {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  h3 {
+    font-family: $open-sans;
+    color: $black;
+    @include font-size(2.9);
+    border-top: 1px $black solid;
+    padding-top: 15px;
+    margin-top: 15px;
+  }
+  a {
+    font-family: $helvetica;
+    color: $grey;
+    @include font-size(1.6);
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    background: $white-grey;
+    padding: 25px;
+    display: block;
+    @include transition(all .3s);
+    &:hover {
+      color: $black;
+      background: $light-grey;
+      display: block;
+      @include transition(all .3s);
+    }
+  }
+  &.blue {
+    h3{
+    }
+    a {
+      background: $light-blue;
+    }
+  }
+  .solutions-product-cta{
+
+    a{
+      min-height: 770px;
+      background: $orange;
+      color: $black;
+      border: 2px solid $orange;
+      @include transition(all .3s);
+      @include medium-screen{
+          min-height: 0px;
+          height: auto;
+      }
+    }
+    h3{
+
+    }
+    &:hover {
+      border: 2px solid $black;
+      @include transition(all .3s);
+    }
+  }
+}
+
+/*.resource-menu - Menu used to define the content blocks with images and drawers in them on resources page*/
+
+.resource-menu {
+  margin-bottom: 25px;
+  @include box-sizing(border-box);
+  a, img {
+    @include box-sizing(border-box);
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    @include font-size(1.6);
+  }
+  img {
+    padding: 25px;
+    width: 100%;
+  }
+  > div {
+    background: $white-grey;
+    color: $grey;
+    padding: 25px;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 20px;
+    @include transition(background .3s, color .3s);
+    &:hover {
+      background: $light-grey;
+      display: block;
+      color: $black;
+      @include transition(background .3s, color .3s);
+    }
+  }
+  label, .label {
+    font-family: $open-sans;
+    @include font-size(1.9);
+    font-weight: bold;
+    margin: 0 auto;
+    padding-right: 15px;
+    text-align: center;
+    max-height: 61px;
+    display: block;
+    overflow: hidden;
+    @include border-radius(10px);
+  }
+  .button {
+    font-family: $open-sans;
+    color: $blue;
+    text-align: center;
+    font-weight: bold;
+    width: 50%;
+    height: 1em;
+    margin: 0 auto;
+  }
+  .drawer{
+    min-height: 61px;
+  }
+  .label{
+    display: none;
+    @include medium-screen {
+      font-family: $open-sans;
+      @include font-size(1.9);
+      font-weight: bold;
+      margin: 0 auto;
+      padding-right: 15px;
+      text-align: center;
+      max-height: 61px;
+      display: block;
+      overflow: hidden;
+      @include border-radius(10px);
+    }
+  }
+}
+
+/*.contact-menu used on the contact page*/
+
+div.contact-menu {
+  font-weight: bold;
+  @include font-size(1.4);
+  @include box-sizing(border-box);
+  > div.columns {
+    background: $white;
+    margin-bottom: 10px;
+    @include border-radius(10px);
+  }
+  a {
+    text-align: center;
+    display: block;
+    color: $black;
+    padding: 20px;
+    font-family: $open-sans;
+    text-decoration: none;
+    @include transition(all .3s);
+    @include box-sizing(border-box);
+    &:hover {
+      background: $orange;
+      @include border-radius(10px);
+      @include transition(all .3s);
+    }
+  }
+  .pad{
+    padding: 10px;
+    @include medium-screen {
+      padding: 10px !important;
+    }
+  }
+  .drawer{
+    max-height: 800px;
+  }
+}
+
+/*tab-menu added on to the .orange-menu for all the about pages*/
+
+div.tab-menu {
+  margin: -20px auto;
+  padding-bottom: 10px;
+  > div.active > a {
+    background: $orange;
+  }
+  a{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    @include font-size(1);
+  }
+}
+
+div.row.orange-menu.tab-menu a {
+  padding: 10px 5px;
+}
+
+/*************************** Extra formatting tools ***************************/
+
+.top-margin {
+  margin-top: 50px;
+}
+
+.bottom-margin {
+  margin-bottom: 20px;
+}
+
+.no-bottom-padding-margin {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.no-top-padding-margin {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.pad80 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.pad50 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/*************************** Images ***************************/
+/*Solutions-->sourcing*/
+
+.image-sourcing {
+  text-align: center;
+  margin: 0px auto;
+  border-top: 1px solid $light-grey;
+  border-bottom: 0px;
+  img {
+    width: 100%;
+  }
+}
+
+img {
+  &.logo-about {
+    width: 100%;
+    @include medium-screen {
+      /*Prevents a row from turning columns vertical in mobile view*/
+      width: 320px;
+      height: auto;
+    }
+    @include small-screen {
+      max-width: 2750px;
+      height: auto;
+    }
+  }
+  &.smartphone-image {
+    width: 100%;
+  }
+}
+
+/*solutions-->mobile*/
+
+.image-mobile {
+  width: 245px;
+}
+
+/*solutions-->travel management*/
+
+.image-travel-mgt {
+  width: 80%;
+  display: block;
+  margin: auto auto;
+}
+
+/*About-->Partners: Partner logos*/
+
+div {
+  &.partner-logo {
+    min-height: 125px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include background-size(contain);
+    @include medium-screen {
+      min-height: 100px;
+      background-size: 25% auto;
+    }
+  }
+  &.aegis {
+    background-image: url(../images/logo-partners/aegis.png);
+  }
+  &.atriis {
+    background-image: url(../images/logo-partners/atriis_logo.gif);
+  }
+  &.informatica {
+    background-image: url(../images/logo-partners/informatica-logo.png);
+  }
+  &.officedepot {
+    background-image: url(../images/logo-partners/officedepot.png);
+  }
+  &.rackspace {
+    background-image: url(../images/logo-partners/rackspace.png);
+  }
+  &.sungard {
+    background-image: url(../images/logo-partners/sungard.png);
+  }
+  &.thakralone {
+    background-image: url(../images/logo-partners/thakralone.png);
+  }
+  &.wex {
+    background-image: url(../images/logo-partners/wex.png);
+  }
+}
+
+/*Top Banner*/
+/*No hyperlink, place ".banner" in div with 'row' class*/
+
+.banner {
+  @include big-screen {
+    @include font-size(0.8);
+  }
+  @include small-screen {
+    h1 {
+      max-height: 58px;
+      overflow: hidden;
+    }
+  }
+  div {
+    margin: 20px 0;
+    text-align: center;
+    background: $white;
+    color: $black;
+    display: block;
+    padding: 10px 30px 6px;
+  }
+  h1 {
+    margin-bottom: 5px;
+    font-family: $open-sans;
+    font-size: 4.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  p {
+    font-family: $open-sans;
+    font-size: 1.8em;
+    color: $black;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    border-top: 1px solid $orange;
+    padding-top: 5px;
+    margin-top: -8px;
+  }
+  .twolines {
+    line-height: 1em;
+  }
+  &.large-banner{
+    div {
+      background: rgba(170, 219, 255, 0.15);
+      border: 2px solid #333333;
+      border-radius: 5px;
+    }
+  }
+}
+
+
+.banner-bg {
+  @include box-sizing(border-box);
+  height: 180px;
+  max-height: 300px;
+  width: 100%;
+  margin-bottom: 20px;
+  border-top: 2px solid $light-grey;
+  border-bottom: 2px solid $light-grey;
+}
+.bigger-banner-bg{
+  height: 100%;
+  width: 100%;
+  margin-bottom: 0px;
+  border-bottom: 2px solid $light-grey;
+}
+
+/*Banner backgrounds*/
+
+.brick-bg {
+  background: url(../images/banner/p-bg-5.jpg) no-repeat center center;
+  @include background-size(cover);
+}
+
+.leaves-bg {
+  background: url(../images/banner/p-bg-25.jpg) no-repeat center center;
+  @include background-size(cover);
+}
+
+.burlap-bg {
+  background: url(../images/banner/p-bg-18.jpg) no-repeat center center;
+  @include background-size(cover);
+}
+
+.clouds-bg {
+  background: url(../images/banner/p-bg-9.jpg) no-repeat center center;
+  @include background-size(cover);
+}
+
+.blue-bg {
+  background: $blue-grey;
+}
+.user-group-bg{
+  background: url(../images/banner/user-group-bg.jpg) no-repeat center center;
+  @include background-size(cover);
+}
+/*************************** Banner Animations ***************************/
+/* Animate.css - http://daneden.me/animate */
+/* Licensed under the  license (http://licence.visualidiot.com/) */
+
+body {
+  /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
+  -webkit-backface-visibility: hidden;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+
+@-moz-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+}
+
+
+@-o-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -o-transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+}
+
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  -moz-animation-name: fadeInLeft;
+  -o-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+
+@-moz-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+}
+
+
+@-o-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -o-transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+}
+
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  -moz-animation-name: fadeInRight;
+  -o-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+.intro-1 {
+  -webkit-animation-delay: .75s;
+  -moz-animation-delay: .75s;
+  -ms-animation-delay: .75s;
+  animation-delay: .75s;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -ms-animation-duration: 3s;
+  animation-duration: 3s;
+}
+
+.intro-2 {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -ms-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -ms-animation-duration: 3s;
+  animation-duration: 3s;
+}
+
+/*************************** Drawers ***************************/
+
+.drawer {
+  input[type=checkbox] {
+    position: absolute;
+    left: -99999;
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+  }
+  label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
+  p {
+    max-height: 0;
+    overflow: hidden;
+    padding-left: 30px;
+    @include transition(max-height 0.5s ease);
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  /*Checked state of drawers*/
+  input[type=checkbox]:checked ~ p {
+    max-height: 50em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+}
+
+div.drawer label {
+  background-image: url(../images/dropdowns/dropdown-blk.png);
+  background-repeat: no-repeat;
+  background-size: 1em;
+  background-position: bottom right;
+  &:hover {
+    background-image: url(../images/dropdowns/dropdown-blk.png);
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position: bottom right;
+  }
+}
+
+/*************************** Timeline container formatting ***************************/
+
+.timeline {
+  border-top: 2px solid $white-grey;
+  border-bottom: 2px solid $white-grey;
+}
+
+/*************************** About-->Recognition recognition boxes ***************************/
+
+div.recognition {
+  width: 100%;
+  background: $white-grey;
+  padding: 10px;
+  margin-bottom: 20px;
+  @include box-sizing(border-box);
+  img {
+    width: 100%;
+    max-width: 220px;
+    border: 2px solid $white-grey;
+    @include border-radius(10px);
+  }
+  img.event-poster{
+    max-width: 470px;
+    width: 50%;
+    display: inline-block;
+    float: right;
+    margin: auto auto 5px 10px;
+    &.smaller{
+      max-width: 370px;
+    }
+  }
+  img.current-newsletter{
+    width: 100%;
+    max-width: 940px;
+    border: 1px solid $grey;
+  }
+}
+
+/*************************** Mobile screen 1 ***************************/
+@include medium-screen {
+  /*Prevents the return-to-top columns from dropping down to a new row in mobile view*/
+  .return-to-top {
+    width: 33%;
+    margin-left: auto;
+  }
+  /*Makes tab-menu smaller and prevents from dropdown in mobile size*/
+  div {
+    &.container > div.tab-menu.orange-menu > div.columns, &.compress-cols > div.columns {
+      margin-left: 2% !important;
+      float: left;
+    }
+    &.one-line-menu > div.columns {
+      width: 30% !important;
+      float: left !important;
+      margin-left: 2% !important;
+    }
+  }
+  /*Hides an element in mobile view*/
+  .hide-mobile, img.hide-mobile {
+    display: none;
+  }
+}
+.blue-section.pattern {
+  background: url(images/p-blue-pat-3.png) repeat 0 0; }
+
+.blue-section.imagebg {
+  padding-bottom: 10px;
+  padding-top: 20px;
+  background: url(images/p-bg-27.jpg) no-repeat 0 top;
+  background-size: cover; }
+
+.white-section {
+  background-color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.grey-section {
+  background-color: #DFDFDF;
+  padding-top: 80px;
+  padding-bottom: 80px; }
+
+.white-menu.hovers .helpHover, .white-menu .helpHover {
+  font-family: "Open Sans Condensed", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: black;
+  font-size: 13px;
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 20px;
+  display: block;
+  background: rgba(255, 255, 255, 0.35);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  height: 100px;
+  margin: 0px 0px 15px 0px;
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  position: relative; }
+
+.white-menu .helpHover {
+  background: #FFF;
+  -webkit-box-shadow: inset 0px 0px 0px 2px black, 1px 3px 2px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 0px 0px 0px 2px black, 1px 3px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px 0px 0px 2px black, 1px 3px 2px rgba(0, 0, 0, 0.25); }
+
+.white-menu .helpHover.bigger {
+  padding: 30px 20px 60px;
+  font-size: 1.85rem; }
+
+.white-menu.hovers .helpHover:hover {
+  text-align: center;
+  background: #7290A9;
+  padding: 20px;
+  -webkit-box-shadow: inset 0px 0px 0px 2px orange, 1px 3px 2px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: inset 0px 0px 0px 2px orange, 1px 3px 2px rgba(0, 0, 0, 0.35);
+  box-shadow: inset 0px 0px 0px 2px orange, 1px 3px 2px rgba(0, 0, 0, 0.35);
+  display: block;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+
+.white-menu.hovers .helpHover:hover .black-line {
+  background-color: white; }
+
+.white-menu.hovers .helpHover:hover:before {
+  content: " ";
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: 101%;
+  left: 40%;
+  border-top: 9px solid black !important;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  pointer-events: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+
+.white-menu.hovers .helpHover:hover:after {
+  background: rgba(255, 170, 0, 0.9);
+  content: attr(data-tooltip);
+  display: block;
+  position: absolute;
+  bottom: 107%;
+  left: -50%;
+  width: 200%;
+  padding: 10px;
+  font-size: 1.1em;
+  border: 2px solid black;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px; }
+
+ul.check-list li:before {
+  padding: 0px 7px 0px 0px;
+  color: orange; }
+
+.extraSpace {
+  margin: 30px 0px 40px; }
+
+.contact_map{
+  padding: 15px;
+  padding-left: 28px;
+}
+.solutions-images{
+
+  border:2px solid black;
+  border-radius: 10px;
+  margin-left: -2%;
+  margin-bottom: 6%;
+  text-align:center;
+    max-width:100%;
+    max-height:100%;
+  @include medium-screen{
+    display:none;
+  }
+  &.no-border{
+    border: none;
+  }
+}
+.divider{
+    position:relative;
+    width:10px;
+    height:75%;
+    border-left:1px solid black;
+}
+.solutions-product{
+ > a {
+    min-height: 750px;
+    height:auto;
+  }
+  @include medium-screen{
+    > a {
+      min-height: 0px;
+      height: auto;
+    }
+  }
+}
+.solutions-para{
+  text-align:left;
+  min-height: 160px;
+  height: auto;
+  @include medium-screen {
+    display: none;
+  }
+}
+.solutions-para-top{
+  text-align:left;
+  min-height: 75px;
+  height: auto;
+  @include medium-screen {
+    min-height: 0px;
+    height: auto;
+    text-align: center;
+  }
+}
+.pugc-nav{
+  background: #eeeeee;
+  padding:5px 0px 5px 0px;
+  width:100%;
+  text-align:center;
+
+  ul{
+    margin:auto;
+    >li{
+      display: inline-block;
+      padding: 10px;
+      >a{
+      text-decoration: none;
+      color: $black;
+      font-size: 2.0em;
+      }
+      a:hover {
+      color: #F90;
+    }
+      &.pugc-nav-register{
+        >a:hover {
+          color: #FFF;
+        }
+      }
+      &.pugc-nav-registered{
+        >a:hover {
+          color: $blue;
+        }
+        >a{
+          color: $blue-grey;
+        }
+    }
+    }
+  }
+}
+.pugc-details{
+  background: rgba(170, 219, 255, 0.2);
+  border: 2px solid rgba(170, 219, 255, 0.2);
+  border-radius: 5px;
+}
+
+.sticky-menu{
+  position:relative;
+  width: 100%;
+}
+.sticky-menu-scrolled {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  z-index: 150;
+  /*ul{
+    margin-bottom:20px;
+    >li{
+      display: inline;
+      padding: 20px;
+      >a{
+      text-decoration: none;
+      color: $black;
+      font-size: 2.0em;
+      }
+      a:hover {
+      color: #F90;
+    }
+  }
+}*/
+}
+.slide-in-CTA{
+  /*hide the window*/
+        position:fixed;
+        bottom:-260px;
+        right:0px;
+
+        /*set the size and background color*/
+        height:220px; width:415px;
+        background-color:#fff;
+
+        /*add border*/
+        border-top:0px solid #000;
+        border-left:0px solid #000;
+
+        /*add shadow*/
+        -moz-box-shadow: 0px 0px 15px #888;
+        -webkit-box-shadow: 0px 0px 15px #888;
+        box-shadow: 0px 0px 15px #888;
+
+}
+.slide-in-button{
+  margin-top:0%;
+  width: 60%;
+  height: 75%;
+  >a{
+    padding:5px;
+    >span{
+      font-size: 1.2em;
+    }
+  }
+
+
+}
+.slide-in-img{
+  margin-left: -2%;
+  >img{
+    text-align:center;
+      max-width:90%;
+      max-height:90%;
+  }
+}
+.center-fill-image{
+  text-align:center;
+    max-width:100%;
+    max-height:100%;
+}
+
+.troegs-row{
+  width: 70%;
+  margin-left: 0%;
+  float:left;
+@include medium-screen{
+  width: 100%;
+  }
+}
+
+.white-box-hover{
+  &:hover{
+    background:white;
+    @include transition(all .3s);
+  }
+}
+
+.formSubmitButton{
+  width: 100%;
+  text-align: center;
+}
+
+.multiview-image{
+    text-align:center;
+  img {
+    height: 240px;
+    width: 160px;
+  }
+}
+
+.solutions-back-box{
+  background-color: $blue-grey;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+.solutions-module-thumb{
+  div {
+    border: 5 px solid $grey;
+  }
+  img {
+    height: 130px;
+    width: 260 px;
+  }
+}
+
+.invisible_spacer{
+  visibility: hidden;
+  display: block;
+}
+
+/*************************** Default Accordian Styles ***************************/
+/*
+@import compass;
+
+$questionColor: hsl(240, 100, 72);
+$pad: 20px;
+$faqWidth: 800px;
+
+.faq{
+  width: $faqWidth
+  margin: 20px auto
+}
+
+.question{
+  color: white
+  line-height: 30px
+  padding: 0 0 0 $pad
+  text-shadow: 0 -1px hsla(0,0,0,.5)
+  @include background-image(linear-gradient(top, $questionColor, darken($questionColor,10)))
+  border-radius: 1em
+  overflow: hidden
+  box-shadow: 0 0 10px hsla(0,0,0,.2)
+
+  &:after // clearfix
+    content: ''
+    display: table
+    clear: both
+}
+
+.faqControl {
+  float: right
+  line-height: 30px
+  border: none
+  padding: 0 $pad
+  color: white
+  text-shadow: 0 -1px hsla(0,0,0,.5)
+  background: none
+  font-size: .8em
+  border-left: 1px solid hsla(0,0,100,.5)
+
+  &:hover, &:focus
+    outline: none
+    @include background-image(linear-gradient(top, lighten($questionColor,8), lighten($questionColor,4)))
+}
+
+.answer{
+  margin: 0 auto
+  padding: $pad
+  @include background-image(linear-gradient(#fff, #f4f8ff))
+  text-shadow: 0 1px hsla(0,0,100,.5)
+  width: $faqWidth - $pad*4
+  box-shadow: 0 0 10px hsla(0,0,0,.2),inset 0 0 40px hsla(0,0,0,.1)
+  border: 1px solid hsla(0,0,0,.2)
+  border-radius: 0 0 4px 4px
+}*/

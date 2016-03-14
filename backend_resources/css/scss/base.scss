@@ -1,0 +1,113 @@
+/*VARS*/
+
+/*COLORS*/
+$orange: #ffa500;
+$blue: #143f8e;
+$white: #fff;
+$black: #000;
+$grey: #555;
+$blue-grey: #809ab1;
+$white-grey: #eee;
+$light-grey: #dadada;
+$light-orange: #ffcc80;
+$light-blue: #bbdefb;
+
+$helvetica: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$open-sans: 'Open Sans Condensed', "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$lato: 'Lato', Helvetica, Arial, "Lucida Grande", sans-serif;
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+@mixin box-sizing($sizing){
+  -webkit-box-sizing: $sizing;
+  -moz-box-sizing: $sizing;
+  box-sizing: $sizing;
+}
+@mixin background-size($sizing){
+  -webkit-background-size: $sizing;
+  -moz-background-size: $sizing;
+  -o-background-size: $sizing;
+  background-size: $sizing;
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+@mixin big-screen {
+	@media only screen and (max-width: 950px){
+		@content;
+	}
+}
+@mixin medium-screen {
+	@media only screen and (max-width: 767px){
+		@content;
+	}
+}
+@mixin medium-small-screen {
+  @media only screen and (max-width: 540px){
+    @content;
+  }
+}
+@mixin small-screen {
+	@media only screen and (max-width: 400px){
+		@content;
+	}
+}
+
+/*MIXINS
+@mixin page-section ($bgcolor, $padding-top, $padding-bottom){
+	background-color: $bgcolor;
+	padding-top: $padding-top;
+	padding-bottom: $padding-bottom;
+}
+@mixin line ($color, $height, $margin-top, $margin-bottom){
+	color: $color;
+	background-color: $color;
+	border: 0;
+	height: $height;
+	margin-top: $margin-top;
+	margin-bottom: $margin-bottom;
+}*/
+
+/*VENDOR PREFIXES
+@mixin transition($property, $time){
+	transition: $property $time;
+	-webkit-transition: $property $time;
+    -moz-transition: $property $time;
+    -o-transition: $property $time;
+}*/
+
+/*BREAKPOINTS
+@mixin breakpoint($point){
+	@if $point == tall{
+		@media (max-width:400px){@content ;}
+	}
+	@else if $point == grande{
+		@media (max-width:767px){@content ;}
+	}
+	@else if $point == venti{
+		@media (max-width:950px){@content ;}
+	}
+}
+@mixin border-box(){
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+@mixin cover-background(){
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}*/
