@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="puridiom" ng-controller="ResourcesController">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Puridiom Site Template</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="description" content="The Puridiom procure-to-pay process streamlines eProcurement from the beginning. We'll always be one step ahead of your procurement challenges." />
+  <meta name="keywords" content="solutions,challenges,puridiom,procure-to-pay,procure to pay,eprocurement,e procurement,procure-to-pay software,procure to pay solutions, TSA" />
+  <meta name="author" content="Puridiom">
+
+  <!--Icons-->
+  <link rel="icon" type="image/vnd.microsoft.icon" href="backend_resources/images/favicon/favicon.ico">
+  <link rel="SHORTCUT ICON" href="backend_resources/images/favicon/favicon.ico" />
+
+  <!--CSS-->
+  <link rel="stylesheet" href="backend_resources/css/style-new.css">
+  <link rel="stylesheet" href="June/new.css">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet" type="text/css">
+
+</head>
+
+<!--Navigation-->
+<body>
+<header>
+  <section>
+<div class="row">
+  <a href="index.html"><img src="backend_resources/images/logo/p-logo.png" alt="Puridiom"/></a>
+    <div class="holiday" >
+      <!--HubSpot Call-to-Action Code -->
+      <span class="hs-cta-wrapper" id="hs-cta-wrapper-f9772c10-2efa-4d88-832a-18ac97aa1798">
+          <span class="hs-cta-node hs-cta-f9772c10-2efa-4d88-832a-18ac97aa1798" id="hs-cta-f9772c10-2efa-4d88-832a-18ac97aa1798">
+              <!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]-->
+              <a href="http://cta-redirect.hubspot.com/cta/redirect/736525/f9772c10-2efa-4d88-832a-18ac97aa1798"  target="_blank" ><img class="hs-cta-img" id="hs-cta-img-f9772c10-2efa-4d88-832a-18ac97aa1798" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/736525/f9772c10-2efa-4d88-832a-18ac97aa1798.png"  alt="Test Now!"/></a>
+          </span>
+          <script charset="utf-8" src="https://js.hscta.net/cta/current.js"></script>
+          <script type="text/javascript">
+              hbspt.cta.load(736525, 'f9772c10-2efa-4d88-832a-18ac97aa1798', {});
+          </script>
+      </span>
+      <!-- end HubSpot Call-to-Action Code -->
+  </div>
+</div>
+</section>
+
+  <div class="navigation" id="top">
+    <nav>
+      <!--To insert tab login menu, simply change the links below as appropriate, and then remove the "style" attribute on the below login menu div.  In addition, visit navbar.scss and change the marked "top" position attribute as directed. (Mobile->nav->ul.active)-->
+      <div class="login-menu" style="display: none;">
+        <div class="login-tab"><a href="#">For Suppliers</a></div>
+        <div class="login-tab"><a href="#">For Buyers</a></div>
+        <div class="login-tab"><a href="#">Login</a></div>
+      </div>
+      <!--Below toggles the "Menu" button so that it only appears while the screen is in a mobile mode, as well as opens it on a click event. For further, see the main controller.-->
+      <div ng-class="{'toggle mobile': !isActive, 'toggle mobile active': isActive}" ng-init="isActive = false" ng-click="isActive = !isActive">
+        <a class="toggle mobile">MENU</a>
+      </div>
+      <ul ng-class="{'': !isActive, 'active': isActive}">
+        <li class="bold text-20"><a  href="about.html">Solutions</a>
+          <ul>
+
+          </ul>
+        </li>
+        <li class="solutions_nav"><a href="site-template-1.html">Budget Control</a>
+          <ul>
+
+          </ul>
+          <!--<div class="sub_nav_container">
+            <ul class="sub_nav_column">
+              <li class="sub_nav_module"><a href="site-template-2.html"><span class="nav_subheader">Workflow Manager</span></a>
+                <ul class="sub_nav_module_list">
+                <li class="sub_nav_item"><a href="site-template-3.html">Requests</a></li>
+                <li class="sub_nav_item"><a href="workflow-manager.html#budget-control">Budget Control</a></li>
+                <li class="sub_nav_item"><a href="workflow-manager.html#approvals">Approvals</a></li>
+                <li class="sub_nav_item"><a href="workflow-manager.html#standard-catalog-management">Standard Catalog Management</a></li>
+                <li class="sub_nav_item"><a href="workflow-manager.html#punchout-catalog-management">Punchout Catalogs</a></li>
+                <li class="sub_nav_item"><a href="workflow-manager.html#expense-manager">Expense Manager</a></li>
+              </ul>
+            </li>
+              <li class="sub_nav_module"><a href="sourcing_new.html"><span class="nav_subheader">Sourcing</span></a>
+                <ul class="sub_nav_module_list">
+                <li class="sub_nav_item"><a href="sourcing_new.html#supplier-registration-profile-management">Supplier Registration and Profile Management</a></li>
+                <li class="sub_nav_item"><a href="sourcing_new.html#rfx-management">RFx Management</a></li>
+                <li class="sub_nav_item"><a href="sourcing_new.html#sourcing-portal">Sourcing Portal</a></li>
+              </ul>
+              </li>
+            </ul>
+          <ul class="sub_nav_column">
+            <li class="sub_nav_module"><a href="ap-automation.html"><span class="nav_subheader">AP Automation</span></a>
+              <ul class="sub_nav_module_list">
+                <li class="sub_nav_item"><a href="ap-automation.html#e-invoice-processing">eInvoice Processing</a></li>
+                <li class="sub_nav_item"><a href="ap-automation.html#invoice-matching">Invoice Matching</a></li>
+                <li class="sub_nav_item"><a href="ap-automation.html#invoice-scanning-extraction">Invoice Scanning</a></li>
+                <li class="sub_nav_item"><a href="ap-automation.html#payment">Payment</a></li>
+              </ul>
+            </li>
+              <li class="sub_nav_module"><a href="supplier-hub.html"><span class="nav_subheader">Supplier Hub</span></a>
+                <ul class="sub_nav_module_list">
+                <li class="sub_nav_item"><a href="supplier-hub.html#supplier-registration-profile-management">Supplier Registration & Profile Management</a></li>
+                <li class="sub_nav_item"><a href="supplier-hub.html#sourcing-portal">Sourcing Portal</a></li>
+                <li class="sub_nav_item"><a href="supplier-hub.html#advanced-catalog-content-management">Advanced Catalog Content Management</a></li>
+                <li class="sub_nav_item"><a href="supplier-hub.html#e-invoice-processing">eInvoice Processing</a></li>
+                <li class="sub_nav_item"><a href="supplier-hub.html#dynamic-discounting">Dynamic Discounting</a></li>
+              </ul>
+            </li>
+          </ul>
+            <ul class="sub_nav_column" style="padding-right:0px;">
+              <li class="sub_nav_module"><a href="plan-to-pay.html"><span class="nav_subheader">Plan-to-Pay</span></a>
+                <ul class="sub_nav_module_list">
+                <li class="sub_nav_item"><a href="plan-to-pay.html#workflow-manager">Workflow Manager</a></li>
+                <li class="sub_nav_item"><a href="plan-to-pay.html#order-management">Order Management</a></li>
+                <li class="sub_nav_item"><a href="plan-to-pay.html#contract-management">Contract Management</a></li>
+                <li class="sub_nav_item"><a href="plan-to-pay.html#rfx-managment">RFx Management</a></li>
+                <li class="sub_nav_item"><a href="plan-to-pay.html#receiving">Receiving</a></li>
+                <li class="sub_nav_item"><a href="plan-to-pay.html#invoice-matching">Invoice Matching</a></li>
+                <li class="sub_nav_item"><a href="plan-to-pay.html#inventory-manager">Inventory Manager</a></li>
+                <li class="sub_nav_item"><a href="plan-to-pay.html#asset-tracker">Asset Tracker</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>-->
+      </li>
+        <!--<div class="sub_nav_container smaller">
+          <ul class="sub_nav_column">
+            <li class="sub_nav_module"><a href""><span class="nav_subheader">Supplier Management</span></a>
+              <ul class="sub_nav_module_list">
+                <li class="sub_nav_item"><a href"">Levels of Support</a>
+                </li>
+                <li class="sub_nav_item"><a href"">Training</a>
+                </li>
+                <li class="sub_nav_item"><a href"">Implementation</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sub_nav_module"><a href""><span class="nav_subheader">Supplier Data<br>Enrichment</span></a>
+              <ul class="sub_nav_module_list">
+                <li class="sub_nav_item"><a href"">D&amp;B Data Diversity &amp; Risk Assessment</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="sub_nav_column">
+            <li class="sub_nav_module"><a href""><span class="nav_subheader">Business Process Outsourcing</span></a>
+              <ul class="sub_nav_module_list">
+                <li class="sub_nav_item"><a href"">Consulting</a>
+                </li>
+                <li class="sub_nav_item"><a href"">Staff Augmentation</a>
+                </li>
+                <li class="sub_nav_item"><a href"">Spend Analytics</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sub_nav_module"><a href""><span class="nav_subheader">Supplier Enablement</span></a>
+              <ul class="sub_nav_module_list"><a href""></a>
+              </ul>
+            </li>
+          </ul>
+
+        </div>-->
+        <li><a href="services.html">Standard Catalog Management</a>
+          <ul>
+
+          </ul>
+        </li>
+        <li><a href="resources.html">Punchout Catalog Management</a>
+          <ul>
+
+          </ul>
+        </li>
+        <li><a href="pressroom.html">Expense Manager</a>
+          <ul>
+
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+  <!---EndNav-->
+  <!--Banner-->
+  <section>
+  <div class="container banner-bg leaves-bg">
+    <div class="row banner">
+      <div class="seven columns animated fadeInRight">
+        <h1 class="intro-1 animated fadeInRight">Supplier Registration</h1>
+        <p class="intro-2 animated fadeInLeft">Subtitle Here</p>
+      </div>
+      </div>
+    </div>
+    </section>
+  <!--Middle Section-->
+
+    <section class="main-section">
+      <div class="row">
+            <div class="row" id="supplier-registration-profile-management">
+              <div class="two columns">
+                <img src="backend_resources/images/solutions/icons/supplier-registration-icon.png"/>
+            </div>
+
+            <div class="nine columns">
+              <h2 class="bold sans black caps text-42"></h2>
+            </div>
+            </div>
+
+          <div class="row">
+            <div class="two columns">
+            </div>
+            <div class="five columns">
+            <p class="black sans text-25">
+              <!--Review and approval processes are in place to make sure only qualified and relevant suppliers are added to the master list for use on requests, orders, and solicitations.--></p>
+
+              <ul class="square-list left-jsfu sans bold text-20" style="color: black; margin-left: 2%;">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <div class="five columns">
+              <!--[CTA]-->
+
+            </div>
+          </div>
+
+
+        </div>
+
+  <div class="row" style="margin-top:4%;">
+    <div class="row">
+          <div class="row" id="supplier-registration-profile-management">
+
+            <div class="two columns">
+              <img src="backend_resources/images/solutions/icons/rfx-management-icon.png"/>
+          </div>
+          <div class="four columns">
+            <h2 class="bold sans black caps text-42"></h2>
+          </div>
+
+          </div>
+
+        <div class="row">
+          <div class="two columns">
+          </div>
+          <div class="five columns">
+          <p class="black sans text-25"></p>
+          <ul class="square-list left-jsfu sans bold text-20" style="color: black; margin-left: 2%;">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          </div>
+          <div class="five columns">
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    </div>
+    </section>
+
+  <!--Footer-->
+  <section class="section-footer">
+  <div class = "container footer">
+    <!--The below section will be hidden when in mobile view.-->
+    <div class = "row hide-mobile">
+      <div class = "push_two two columns logo">
+        <a href = "index.html"><img src = "backend_resources/images/logo/p-nu-vert.png" alt="Puridiom Home"></a>
+      </div>
+      <div class = "one columns footernav">
+        <ul>
+          <a href="about.html"><li>Company</li></a>
+          <a href="solutions.html"><li>Solutions</li></a>
+          <a href="services.html"><li>Services</li></a>
+          <a href="resources.html"><li>Resources</li></a>
+          <a href="http://www.puridiom.co/blog/"><li>Blog</li></a>
+          <a href="http://puridiom.com/privacy/"><li>Privacy</li></a>
+        </ul>
+      </div>
+      <div class = "three columns">
+        <ul class="contact">
+          <a href = "about_contact.html">
+            <li>395 St. John's Church Rd</li>
+            <li>Suite 101</li>
+            <li>Camp Hill, PA 17011</li></a>
+            <li class = "contact">Toll Free: 800-388-1415</li>
+            <li class = "contact">Phone: 717-691-5691</li>
+            <li class = "contact">Fax: 717-691-5690</li>
+          </div>
+          <div class = "one columns">
+            <ul>
+              <a href="https://www.facebook.com/Puridiom"><li><img src="backend_resources/images/icons/social/facebook-grey.png" alt="Puridiom on Facebook"></li></a>
+              <a href="https://twitter.com/PuridiomPros"><li><img src="backend_resources/images/icons/social/twitter-grey.png" alt="Puridiom on Twitter"></li></a>
+              <a href="http://www.linkedin.com/company/puridiom"><li><img src="backend_resources/images/icons/social/linkedin-grey.png" alt="Puridiom on LinkedIn"></li></a>
+            </ul>
+          </div>
+        </div>
+        <!--The below section will be revealed in mobile view. It is similar to the above, but removes some information and makes it into one column.-->
+        <div class="mobile-show">
+          <div class="logo">
+            <a href = "index.html"><img src = "backend_resources/images/logo/p-nu-vert.png" alt="Puridiom Home"></a>
+          </div>
+          <div>
+            <div>
+              <a href="https://www.facebook.com/Puridiom"><img src="backend_resources/images/icons/social/facebook-grey.png" alt="Puridiom on Facebook"></a>
+            </div>
+            <div>
+              <a href="https://twitter.com/PuridiomPros"><img src="backend_resources/images/icons/social/twitter-grey.png" alt="Puridiom on Twitter"></a>
+            </div>
+            <div>
+              <a href="http://www.linkedin.com/company/puridiom"><img src="backend_resources/images/icons/social/linkedin-grey.png" alt="Puridiom on LinkedIN"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <!--JS-->
+
+      <!--Angular Version 1.2.17-->
+      <script src="backend_resources/angular/angular.js" type="text/javascript"></script>
+      <script src="backend_resources/angular/angular-animate.js" type="text/javascript"></script>
+      <!--angular animate is necessary to make the slider animate-->
+      <script src="backend_resources/angular/controllers.js" type="text/javascript"></script>
+      <script src="backend_resources/angular/resourcesController.js" type="text/javascript"></script>
+      <!--Res controller is separate because it contains the data for all of the resources/resource blocks. Use the resource controller to add new data to this page by following the format specified.-->
+
+      <!--Scrolling Animation JS-->
+      <script src="backend_resources/angular/scroll-animate.js" type="text/javascript"></script>
+
+      <!-- Start of Async HubSpot Analytics Code -->
+      <script type="text/javascript">
+      (function(d,s,i,r) {
+      if (d.getElementById(i)){return;}
+      var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+      n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/736525.js';
+      e.parentNode.insertBefore(n, e);
+      })(document,"script","hs-analytics",300000);
+      </script>
+      <!-- End of Async HubSpot Analytics Code -->
+
+    </body>
+    </html>

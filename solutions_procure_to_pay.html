@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="puridiom" ng-controller="ResourcesController">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Puridiom Procure-to-Pay | Procurement, Revolutionized</title>
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="description" content="The Puridiom Procure-to-Pay process lets companies automate the entire procurement workflow without losing valuable data about business processes." />
+<meta name="keywords" content="puridiom,process,procure-to-pay,procure to pay,eprocurement,e procurement,procure-to-pay software,procure to pay solutions, TSA" />
+<meta name="author" content="Puridiom">
+
+
+<!--Icons-->
+<link rel="icon" type="image/vnd.microsoft.icon" href="backend_resources/images/favicon/favicon.ico">
+<link rel="SHORTCUT ICON" href="backend_resources/images/favicon/favicon.ico" />
+
+<!--JS-->
+<!--Angular Version 1.2.17-->
+<script src="backend_resources/angular/angular.js" type="text/javascript"></script>
+<script src="backend_resources/angular/angular-animate.js" type="text/javascript"></script>
+<!--angular animate is necessary to make the slider animate-->
+<script src="backend_resources/angular/controllers.js" type="text/javascript"></script>
+<script src="backend_resources/angular/resourcesController.js" type="text/javascript"></script>
+<!--Res controller is separate because it contains the data for all of the resources/resource blocks. Use the resource controller to add new data to this page by following the format specified.-->
+
+<!--Multiview Header Tracking Code-->
+<script src="//assets.adobedtm.com/c876840ac68fc41c08a580a3fb1869c51ca83380/satelliteLib-9902ae5a3adb3a12f8a4f74bf2e38dad0595d863.js"></script>
+
+<!--CSS-->
+<link rel="stylesheet" href="backend_resources/css/style.css">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet" type="text/css">
+
+</head>
+
+<!--Navigation-->
+<body>
+	<div class="navigation" id="top">
+	<nav><a href="index.html"><img src="backend_resources/images/logo/p-logo.png" alt="Puridiom"/></a>
+		<!--To insert tab login menu, simply change the links below as appropriate, and then remove the "style" attribute on the below login menu div.  In addition, visit navbar.scss and change the marked "top" position attribute as directed. (Mobile->nav->ul.active)-->
+		<div class="login-menu" style="display: none;">
+			<div class="login-tab"><a href="#">For Suppliers</a></div>
+			<div class="login-tab"><a href="#">For Buyers</a></div>
+			<div class="login-tab"><a href="#">Login</a></div>
+		</div>
+	<!--Below toggles the "Menu" button so that it only appears while the screen is in a mobile mode, as well as opens it on a click event. For further, see the main controller.-->
+	<div ng-class="{'toggle mobile': !isActive, 'toggle mobile active': isActive}" ng-init="isActive = false" ng-click="isActive = !isActive">
+		<a class="toggle mobile">MENU</a>
+	</div>
+	<ul ng-class="{'': !isActive, 'active': isActive}">
+		<li><a href="about.html">About Us</a>
+			<ul>
+				<li><a href="about_partners.html">About Our Partners</a></li>
+				<li><a href="about_contact.html">Contact Us</a></li>
+			</ul></li>
+		<li><a href="solutions.html">Solutions</a>
+			<ul>
+				<li><a href="solutions_eprocurement.html">eProcurement</a></li>
+				<li><a href="solutions_procure_to_pay.html">Procure-to-Pay</a></li>
+				<li><a href="solutions_mobile.html">Mobile</a></li>
+				<li><a href="solutions_sourcing.html">Sourcing</a></li>
+				<li><a href="solutions_contract_management.html">Contract Management</a></li>
+				<li><a href="solutions_invoicing.html">Invoicing</a></li>
+				<li><a href="solutions_outsourcing.html">Outsourcing</a></li>
+				<li><a href="solutions_accounts_payable.html">Accounts Payable</a></li>
+				<li><a href="solutions_inventory.html">Inventory</a></li>
+				<li><a href="solutions_travel_management.html">Travel Management</a></li>
+			</ul></li>
+		<li><a href="services.html">Services</a>
+			<ul>
+				<li><a href="services_platforms.html">Platforms</a></li>
+				<li><a href="services_marketplace.html">Marketplace</a></li>
+				<li><a href="services_outsourcing.html">Outsourcing</a></li>
+				<li><a href="services_supplier_enablement.html">Supplier Enablement</a></li>
+				<li><a href="services_support.html">Support</a></li>
+				<li><a href="services_integration.html">Integration</a></li>
+				<li><a href="services_implementation.html">Implementation</a></li>
+				<li><a href="services_training.html">Training</a></li>
+			</ul></li>
+		<li><a href="resources.html">Resource Center</a>
+			<ul>
+				<li><a href="resources.html#whitepaper">White Papers</a></li>
+				<li><a href="resources.html#casestudies">Case Studies</a></li>
+				<li><a href="resources.html#benchmarks">Benchmark Reports</a></li>
+				<li><a href="resources.html#datasheets">Data Sheets</a></li>
+				<li><a href="resources.html#podcasts">Podcasts</a></li>
+				<li><a href="resources.html#webcasts">Webcasts</a></li>
+			</ul></li>
+		<li><a href="pressroom.html">Press Room</a>
+			<ul>
+				<li><a href="pressroom_events.html">Events</a></li>
+				<li><a href="http://www.puridiom.co/blog/">Blog</a></li>
+                <li><a href="http://puridiom.com/video-page.html">Videos</a></li>
+			</ul></li>
+	</ul></nav>
+</div>
+<!---EndNav-->
+<!--Banner-->
+<div class="container banner-bg burlap-bg">
+	<div class="row banner">
+		<div class="five columns animated fadeInRight">
+			<h1 class="intro-1 animated fadeInRight">Plan-to-Pay</h1>
+			<p class="intro-2 animated fadeInLeft twolines">Your Roadmap To Procurement Transformation Success</p>
+		</div>
+	</div>
+</div>
+<!--Middle Section-->
+<section class="container main-section">
+	<div class="row">
+		<div class="eight columns">
+			<h4 class="heading">Puridiom Defines Plan-to-Pay</h4>
+			<p >Increase spend visibility with each step of the Plan-to-Pay process. From requisition to payment,
+				Puridiom comprehensively automates all processes seamlessly while collecting the data necessary for
+				CPO/CFO business planning. Recommended for organizations with little or no procurement
+				automation, Puridiom transforms procurement into an efficient and cost-effective process with total
+				spend visibility.</p>
+			<p><span class="bold">The Puridiom solution is a comprehensive all-in-one procure-to-pay</span> product that has evolved through years of working with procurement professionals.  Self-help tools enable users to more efficiently and effectively work through each step of the procurement process.   Essential data is continually gathered for reporting and planning purposes.   Modular design allows you to select only the pieces of the procurement solution that your organization needs, and allows you to add as you gain functionality.</p>
+			<h4 class="heading">Plan-to-Pay modules include:</h4>
+		</div>
+		<div class="three columns push_one cta">
+			<a href="resources.html#datasheets"><h4>Read More About All of our Procurement Solutions</h4><hr class="black-line"/>Click here to learn what we can do for you.</a>
+		</div>
+	</div>
+	<div class="row p2p-tooltip-menu">
+		<div class="two columns ttip" data-tooltip="Requisition and Approval Workflow: Puridiom offers an extremely easy-to-use, intuitive interface that enables application users to easily and effectively perform their business functions.">
+			<a><img src="backend_resources/images/icons/solutions-p2p/requist.png" alt="Requisitioning"/><hr class="black-line"/>Requisitioning</a>
+		</div>
+		<div class="two columns ttip" data-tooltip="Budget Controls: To assist you in ensuring funds are encumbered and to establish standard budget criteria, Puridiom can manage and check budgets for cost centers or any combination of business units within the application.">
+			<a><img src="backend_resources/images/icons/solutions-p2p/budget.png" alt="Budgeting"/><hr class="black-line"/>Budgeting</a>
+		</div>
+		<div class="two columns ttip" data-tooltip="Receiving: Puridiom offers receiving capabilities to accommodate a variety of ways in which organizations receive items.">
+			<a><img src="backend_resources/images/icons/solutions-p2p/receive.png" alt="Receiving"/><hr class="black-line"/>Receiving</a>
+		</div>
+		<div class="two columns ttip" data-tooltip="Puridiom's Electronic Invoicing Presentment & Payment (EIPP) solutions allows suppliers to invoice buyers over the internet quickly and securely while managing the processing and payment of invoices online..">
+			<a><img src="backend_resources/images/icons/solutions-p2p/eipp.png" alt="EIPP"/><hr class="black-line"/>EIPP</a>
+		</div>
+		<div class="two columns ttip" data-tooltip="RFQ Features: The entire solicitation process is seamlessly integrated with Puridiom's other modules including the requisition, purchasing, and supplier management processes. Solicitations may be created for any type of items, materials, inventories, services, projects and so on.">
+			<a><img src="backend_resources/images/icons/solutions-p2p/solicit.png" alt="Solicitation"/><hr class="black-line"/>Solicitation</a>
+		</div>
+		<div class="two columns ttip" data-tooltip="The Puridiom Catalog Content Manager (CCM) simplifies and accelerates the supplier data on-boarding process, as well as helping buyers to find, visualize, compare and order all the items they require with catalog data that is electronically available, of high quality, and up-to-date prices.">
+			<a><img src="backend_resources/images/icons/solutions-p2p/content-manage.png" alt="Catalog Content Manager"/><hr class="black-line"/>Catalog Content Manager</a>
+		</div>
+	</div>
+	<div class="row p2p-tooltip-menu">
+		<div class="two columns ttip" data-tooltip="The Puridiom Catalog Content Manager (CCM) simplifies and accelerates the supplier data on-boarding process, as well as helping buyers to find, visualize, compare and order all the items they require with catalog data that is electronically available, of high quality, and up-to-date prices.">
+			<a><img src="backend_resources/images/icons/solutions-p2p/inventory-p2p.png" alt="Inventory Fulfillment"/><hr class="black-line"/>Inventory Fulfillment</a>
+		</div>
+		<div class="two columns ttip" data-tooltip="Reporting: Through the reporting module system, Puridiom will enable recipients with up-to-date information via customized reports.">
+			<a><img src="backend_resources/images/icons/solutions-p2p/reporting.png" alt="Reporting"/><hr class="black-line"/>Reporting</a>
+		</div>
+		<div class="two columns ttip" data-tooltip="Catalog Punch-Out: Through Puridiom's Web Catalog Punch-Out, buyers use the Puridiom application to access supplier websites and find, select, and configure goods for purchase. Puridiom's Catalog Punch-Out feature makes it possible for a user to access a supplier's web site and catalog directly from within the Puridiom application.">
+			<a><img src="backend_resources/images/icons/solutions-p2p/punchout.png" alt="Punch-Out"/><hr class="black-line"/>Punch-Out</a>
+		</div>
+		<div class="two columns ttip" data-tooltip="Buyer: Puridiom offers multiple modules that assist buyers, including Puchase Order, Supplier Management, Forms Management, Action Alerts, System Administration and Security modules.">
+			<a><img src="backend_resources/images/icons/solutions-p2p/buyer.png" alt="Buyer"/><hr class="black-line"/>Buyer</a>
+		</div>
+		<div class="two columns ttip" data-tooltip="Invoice Matching: Puridiom offers a three-way invoice matching between the order, receipt and voucher. You can create debit or credit vouchers from existing purchase orders, receipts or from scratch.">
+			<a><img src="backend_resources/images/icons/solutions-p2p/matching.png" alt="Matching"/><hr class="black-line"/>Matching</a>
+		</div>
+		<div class="two columns ttip" data-tooltip="Supplier Portal: Puridiom's Supplier Management module is rich in features. You can track your suppliers' performance and look at their order history from within the Supplier module, and allow suppliers to register online in an easy and secure process.">
+			<a><img src="backend_resources/images/icons/solutions-p2p/supplier-portal.png" alt="Supplier Portal"/><hr class="black-line"/>Supplier Portal</a>
+		</div>
+	</div>
+	<div class="row p2p-tooltip-menu">
+		<div class="two columns ttip" data-tooltip="eSourcing Solution:  Enterprises using Puridiom's comprehensive blend of sourcing technology and strategic services have enabled them to accelerate sourcing cycles, improve spend visibility and compliance, gain valuable market intelligence, maximize buying power, achieve greater cost savings, and obtain quicker decision-support.">
+			<a><img src="backend_resources/images/icons/solutions-p2p/sourcing-p2p.png" alt="Sourcing"/><hr class="black-line"/>Sourcing</a>
+		</div>
+		<div class="two columns ttip" data-tooltip="Travel Management: Puridiom's unique approach to travel management applies proven procurement practices to corporate business travel, helping businesses implement and adhere to an effective travel management policy.">
+			<a><img src="backend_resources/images/icons/solutions-p2p/travel-p2p.png" alt="Travel Management"/><hr class="black-line"/>Travel Management</a> </div>
+		<div class="two columns ttip" data-tooltip="Asset Management: As a dynamic asset tracking system, Puridiom incorporates several tools to efficiently manage and track company assets. Puridiom's Asset Tracking system captures asset data from Purchase Orders and receiving processes to automatically populate the asset tracking record.">
+			<a><img src="backend_resources/images/icons/solutions-p2p/assets.png" alt="Asset Management"/><hr class="black-line"/>Assets</a>
+		</div>
+		<div class="two columns ttip" data-tooltip="Mobile: Puridiom is constantly improving its workflows, deliverying innovations in its technologies. As mobile devices become increasingly integrated with procurement, Puridiom works to ensure your Procure-to-Pay experience is available with you, whatever the device.">
+			<a><img src="backend_resources/images/icons/solutions-p2p/mobile.png" alt="Mobile"/><hr class="black-line"/>Mobile</a>
+		</div>
+	</div>
+</section>
+<!--Footer-->
+<div class = "container footer">
+	<!--The below section will be hidden when in mobile view.-->
+<div class = "row hide-mobile">
+	<div class = "push_two two columns logo">
+		<a href = "index.html"><img src = "backend_resources/images/logo/p-nu-vert.png" alt="Puridiom Home"></a>
+	</div>
+	<div class = "one columns footernav">
+		<ul>
+			<a href="about.html"><li>Company</li></a>
+			<a href="solutions.html"><li>Solutions</li></a>
+			<a href="services.html"><li>Services</li></a>
+			<a href="resources.html"><li>Resources</li></a>
+			<a href="http://www.puridiom.co/blog/"><li>Blog</li></a>
+			<a href="http://puridiom.com/privacy/"><li>Privacy</li></a>
+		</ul>
+	</div>
+	<div class = "three columns">
+		<ul class="contact">
+			<a href = "about_contact.html">
+				<li>395 St. John's Church Rd</li>
+				<li>Suite 101</li>
+				<li>Camp Hill, PA 17011</li></a>
+			<li class = "contact">Toll Free: 800-388-1415</li>
+			<li class = "contact">Phone: 717-691-5691</li>
+			<li class = "contact">Fax: 717-691-5690</li>
+	</div>
+	<div class = "one columns">
+		<ul>
+			<a href="https://www.facebook.com/Puridiom"><li><img src="backend_resources/images/icons/social/facebook-grey.png" alt="Puridiom on Facebook"></li></a>
+			<a href="https://twitter.com/PuridiomPros"><li><img src="backend_resources/images/icons/social/twitter-grey.png" alt="Puridiom on Twitter"></li></a>
+			<a href="http://www.linkedin.com/company/puridiom"><li><img src="backend_resources/images/icons/social/linkedin-grey.png" alt="Puridiom on LinkedIn"></li></a>
+		</ul>
+	</div>
+</div>
+<!--The below section will be revealed in mobile view. It is similar to the above, but removes some information and makes it into one column.-->
+<div class="mobile-show">
+	<div class="logo">
+		<a href = "index.html"><img src = "backend_resources/images/logo/p-nu-vert.png" alt="Puridiom Home"></a>
+	</div>
+	<div>
+		<div>
+			<a href="https://www.facebook.com/Puridiom"><img src="backend_resources/images/icons/social/facebook-grey.png" alt="Puridiom on Facebook"></a>
+		</div>
+		<div>
+			<a href="https://twitter.com/PuridiomPros"><img src="backend_resources/images/icons/social/twitter-grey.png" alt="Puridiom on Twitter"></a>
+		</div>
+		<div>
+			<a href="http://www.linkedin.com/company/puridiom"><img src="backend_resources/images/icons/social/linkedin-grey.png" alt="Puridiom on LinkedIN"></a>
+		</div>
+	</div>
+</div>
+</div>
+
+<!--Multiview Footer Tracking Code-->
+<script type="text/javascript">_satellite.pageBottom();</script>
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+if (d.getElementById(i)){return;}
+var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/736525.js';
+e.parentNode.insertBefore(n, e);
+})(document,"script","hs-analytics",300000);
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+</body>
+</html>

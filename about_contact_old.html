@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="puridiom" ng-controller="ResourcesController">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Contact Us | Email, Social Media, Events</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="description" content="Want to know more about us? Contact us through email or an online form, connect with us via social media, or attend an event!" />
+	<meta name="keywords" content="Contact Us,puridiom,email,form,events,procure-to-pay,procure to pay,eprocurement,e procurement,procure-to-pay software,procure to pay solutions, TSA" />
+	<meta name="author" content="Puridiom">
+
+
+	<!--Icons-->
+	<link rel="icon" type="image/vnd.microsoft.icon" href="backend_resources/images/favicon/favicon.ico">
+	<link rel="SHORTCUT ICON" href="backend_resources/images/favicon/favicon.ico" />
+
+	<!--JS-->
+	<!--Angular Version 1.2.17-->
+	<script src="backend_resources/angular/angular.js" type="text/javascript"></script>
+	<script src="backend_resources/angular/angular-animate.js" type="text/javascript"></script>
+	<!--angular animate is necessary to make the slider animate-->
+	<script src="backend_resources/angular/controllers.js" type="text/javascript"></script>
+	<script src="backend_resources/angular/resourcesController.js" type="text/javascript"></script>
+	<!--Res controller is separate because it contains the data for all of the resources/resource blocks. Use the resource controller to add new data to this page by following the format specified.-->
+	<script src="backend_resources/angular/drawers.js" type="text/javascript"></script>
+
+	<!--Act-On Tracking Code-->
+	<script src="//assets.adobedtm.com/c876840ac68fc41c08a580a3fb1869c51ca83380/satelliteLib-9902ae5a3adb3a12f8a4f74bf2e38dad0595d863.js"></script>
+
+	<!--CSS-->
+	<link rel="stylesheet" href="backend_resources/css/style.css">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet" type="text/css">
+
+</head>
+
+<!--Navigation-->
+<body>
+	<div class="navigation" id="top">
+		<nav><a href="index.html"><img src="backend_resources/images/logo/p-logo.png" alt="Puridiom"/></a>
+			<!--To insert tab login menu, simply change the links below as appropriate, and then remove the "style" attribute on the below login menu div.  In addition, visit navbar.scss and change the marked "top" position attribute as directed. (Mobile->nav->ul.active)-->
+			<div class="login-menu" style="display: none;">
+				<div class="login-tab"><a href="#">For Suppliers</a></div>
+				<div class="login-tab"><a href="#">For Buyers</a></div>
+				<div class="login-tab"><a href="#">Login</a></div>
+			</div>
+			<!--Below toggles the "Menu" button so that it only appears while the screen is in a mobile mode, as well as opens it on a click event. For further, see the main controller.-->
+			<div ng-class="{'toggle mobile': !isActive, 'toggle mobile active': isActive}" ng-init="isActive = false" ng-click="isActive = !isActive">
+				<a class="toggle mobile">MENU</a>
+			</div>
+			<ul ng-class="{'': !isActive, 'active': isActive}">
+				<li><a href="about.html">About Us</a>
+					<ul>
+						<li><a href="about_partners.html">About Our Partners</a></li>
+						<li><a href="about_contact.html">Contact Us</a></li>
+					</ul></li>
+					<li><a href="solutions.html">Solutions</a>
+						<ul>
+							<li><a href="solutions_eprocurement.html">eProcurement</a></li>
+							<li><a href="solutions_procure_to_pay.html">Procure-to-Pay</a></li>
+							<li><a href="solutions_mobile.html">Mobile</a></li>
+							<li><a href="solutions_sourcing.html">Sourcing</a></li>
+							<li><a href="solutions_contract_management.html">Contract Management</a></li>
+							<li><a href="solutions_invoicing.html">Invoicing</a></li>
+							<li><a href="solutions_outsourcing.html">Outsourcing</a></li>
+							<li><a href="solutions_accounts_payable.html">Accounts Payable</a></li>
+							<li><a href="solutions_inventory.html">Inventory</a></li>
+							<li><a href="solutions_travel_management.html">Travel Management</a></li>
+						</ul></li>
+						<li><a href="services.html">Services</a>
+							<ul>
+								<li><a href="services_platforms.html">Platforms</a></li>
+								<li><a href="services_marketplace.html">Marketplace</a></li>
+								<li><a href="services_outsourcing.html">Outsourcing</a></li>
+								<li><a href="services_supplier_enablement.html">Supplier Enablement</a></li>
+								<li><a href="services_support.html">Support</a></li>
+								<li><a href="services_integration.html">Integration</a></li>
+								<li><a href="services_implementation.html">Implementation</a></li>
+								<li><a href="services_training.html">Training</a></li>
+							</ul></li>
+							<li><a href="resources.html">Resource Center</a>
+								<ul>
+									<li><a href="resources.html#whitepaper">White Papers</a></li>
+									<li><a href="resources.html#casestudies">Case Studies</a></li>
+									<li><a href="resources.html#benchmarks">Benchmark Reports</a></li>
+									<li><a href="resources.html#datasheets">Data Sheets</a></li>
+									<li><a href="resources.html#podcasts">Podcasts</a></li>
+									<li><a href="resources.html#webcasts">Webcasts</a></li>
+								</ul></li>
+								<li><a href="pressroom.html">Press Room</a>
+									<ul>
+										<li><a href="pressroom_events.html">Events</a></li>
+										<li><a href="http://www.puridiom.co/blog/">Blog</a></li>
+										<li><a href="http://www.puridiom.com/video-page.html">Videos</a></li>
+									</ul></li>
+								</ul></nav>
+							</div>
+							<!---EndNav-->
+							<!--Banner-->
+							<div class="container banner-bg clouds-bg">
+								<div class="row banner">
+									<div class="six columns animated fadeInRight">
+										<h1 class="intro-1 animated fadeInRight">Contact Us</h1>
+										<p class="intro-2 animated fadeInLeft">For More Information</p>
+									</div>
+								</div>
+							</div>
+							<!--Tab Navigation Section-->
+							<div class="container blue-bg">
+								<div class="row orange-menu tab-menu">
+									<div class="push_five two columns">
+										<a href="about.html">About Puridiom</a>
+									</div>
+									<div class="three columns">
+										<a href="about_partners.html"><span class="hide-mobile">About our </span>Partners</a>
+									</div>
+									<div class="two columns active">
+										<a href="about_contact.html">Contact<span class="hide-mobile"> Us</span></a>
+									</div>
+								</div>
+							</div>
+							<!--Middle Section-->
+							<section class="container main-section blue-bg">
+								<div class="row contact-menu">
+
+									<!--Contact Info-->
+									<div class="six columns pad">
+										<p>Puridiom <br />
+											395 St. John's Church Rd<br />
+											Suite 101 <br />
+											Camp Hill, PA 17011<br />
+										</p>
+										<p><span class="bold">Toll Free:</span> 800-388-1415</p>
+										<p><span class="bold">Phone:</span> 717-691-5691</p>
+										<p><span class="bold">Fax:</span> 717-691-5690</p>
+									</div>
+
+									<!--Map-->
+									<div class="six columns contact_map">
+										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1522.9787791737845!2d-76.95441627070414!3d40.232245874475765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c8e8f2d1e39e6d%3A0x1e2ce3dd0af05fb3!2sPuridiom!5e0!3m2!1sen!2sus!4v1432737322667" width="400" height="300" frameborder="0" style="border:0"></iframe>
+									</div>
+								</div>
+
+
+								<div class="row">
+
+									<!--Social Media-->
+									<div class="six columns">
+										<div class="row contact-menu">
+											<div class="six columns">
+												<a href="http://www.facebook.com/Puridiom" target="_blank"><img src="backend_resources/images/icons/social/facebook.png" alt="Puridiom on Facebook"/><hr class="black-line"/>FACEBOOK</a>
+											</div>
+											<div class="six columns">
+												<a href="https://twitter.com/PuridiomPros" target="_blank"><img src="backend_resources/images/icons/social/twitter.png" alt="Puridiom on Twitter"/><hr class="black-line"/>TWITTER</a>
+											</div>
+										</div>
+										<div class="row contact-menu">
+											<div class="six columns">
+												<a href="http://www.linkedin.com/company/puridiom" target="_blank"><img src="backend_resources/images/icons/social/linkedin.png" alt="Puridiom on LinkedIN"/><hr class="black-line"/>LINKEDIN</a>
+											</div>
+											<div class="six columns">
+												<a href="pressroom_events.html"><img src="backend_resources/images/icons/contact/events.png" alt="Puridiom Events"/><hr class="black-line"/>EVENTS</a>
+											</div>
+										</div>
+										<div class="row contact-menu">
+											<div class="twelve columns pad drawer">
+												<div class="black drawer-handle" onclick="toggleDrawer(event)">Contact our Support Team</div>
+												<div class="drawer-bottom"><iframe src="http://post.puridiom.com/acton/form/5671/0038:d-0003/0/index.htm" seamless frameborder="0" width="100%" height="500px"></iframe></div>
+											</div>
+										</div>
+									</div>
+
+									<!--Contact Drawers-->
+									<!--Actual drawers must be edited through Acton forms-->
+									<div class="six columns">
+										<div class="row">
+											<div class="twelve columns">
+												<p class="subheading no-bottom-padding-margin">Contact Forms</p>
+												<hr class="black-line no-top-padding-margin">
+											</div>
+										</div>
+										<div class="row contact-menu">
+											<div class="twelve columns pad drawer" style="background-color: #ffa500;">
+												<div class="black drawer-handle" onclick="toggleDrawer(event)">Talk to a Procurement Specialist</div>
+												<div class="drawer-bottom"><iframe src="http://post.puridiom.com/acton/form/5671/003c:d-0002/1/index.htm?id=003c" seamless frameborder="0" width="100%" height="760px">
+												</iframe>
+											</div>
+											<div class="formSectionDescription">
+												<p><a href="http://www.puridiom.com/privacy" title="Privacy Statement" target="_blank">Privacy Statement</a></p>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</section>
+						<!--Footer-->
+						<div class = "container footer">
+							<!--The below section will be hidden when in mobile view.-->
+							<div class = "row hide-mobile">
+								<div class = "push_two two columns logo">
+									<a href = "index.html"><img src = "backend_resources/images/logo/p-nu-vert.png" alt="Puridiom Home"></a>
+								</div>
+								<div class = "one columns footernav">
+									<ul>
+										<a href="about.html"><li>Company</li></a>
+										<a href="solutions.html"><li>Solutions</li></a>
+										<a href="services.html"><li>Services</li></a>
+										<a href="resources.html"><li>Resources</li></a>
+										<a href="http://www.puridiom.co/blog/"><li>Blog</li></a>
+										<a href="http://www.puridiom.com/privacy/"><li>Privacy</li></a>
+									</ul>
+								</div>
+								<div class = "three columns">
+									<ul class="contact">
+										<a href = "about_contact.html">
+										<li>395 St. John's Church Rd</li>
+										<li>Suite 101</li>
+										<li>Camp Hill, PA 17011</li></a>
+											<li class = "contact">Toll Free: 800-388-1415</li>
+											<li class = "contact">Phone: 717-691-5691</li>
+											<li class = "contact">Fax: 717-691-5690</li>
+										</div>
+										<div class = "one columns">
+											<ul>
+												<a href="https://www.facebook.com/Puridiom"><li><img src="backend_resources/images/icons/social/facebook-grey.png" alt="Puridiom on Facebook"></li></a>
+												<a href="https://twitter.com/PuridiomPros"><li><img src="backend_resources/images/icons/social/twitter-grey.png" alt="Puridiom on Twitter"></li></a>
+												<a href="http://www.linkedin.com/company/puridiom"><li><img src="backend_resources/images/icons/social/linkedin-grey.png" alt="Puridiom on LinkedIn"></li></a>
+											</ul>
+										</div>
+									</div>
+									<!--The below section will be revealed in mobile view. It is similar to the above, but removes some information and makes it into one column.-->
+									<div class="mobile-show">
+										<div class="logo">
+											<a href = "index.html"><img src = "backend_resources/images/logo/p-nu-vert.png" alt="Puridiom Home"></a>
+										</div>
+										<div>
+											<div>
+												<a href="https://www.facebook.com/Puridiom"><img src="backend_resources/images/icons/social/facebook-grey.png" alt="Puridiom on Facebook"></a>
+											</div>
+											<div>
+												<a href="https://twitter.com/PuridiomPros"><img src="backend_resources/images/icons/social/twitter-grey.png" alt="Puridiom on Twitter"></a>
+											</div>
+											<div>
+												<a href="http://www.linkedin.com/company/puridiom"><img src="backend_resources/images/icons/social/linkedin-grey.png" alt="Puridiom on LinkedIN"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Act-On Tracking Code -->
+								<script type="text/javascript">
+								/* <![CDATA[ */
+								document.write (
+									'<img src="http://post.puridiom.com/acton/bn/5671/visitor.gif?ts='+
+									new Date().getTime()+
+									'&ref='+escape(document.referrer) + '">'
+								);
+								var aoAccountId = '5671';
+								var aoCookieMode = 'STANDARD';
+								var aoCookieDomain = 'puridiom.com';
+								var aoServerContext = 'http://post.puridiom.com/acton';
+								/* ]]> */
+								</script>
+								<script type="text/javascript">_satellite.pageBottom();</script>
+								<!-- /end - Act-On Tracking Code -->
+
+ 								 <!-- Start of Async HubSpot Analytics Code -->
+								<script type="text/javascript">
+								(function(d,s,i,r) {
+								if (d.getElementById(i)){return;}
+								var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+								n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/736525.js';
+								e.parentNode.insertBefore(n, e);
+								})(document,"script","hs-analytics",300000);
+								</script>
+								<!-- End of Async HubSpot Analytics Code --> 
+
+							</body>
+							</html>

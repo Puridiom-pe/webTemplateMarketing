@@ -1,0 +1,610 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+  <title>Puridiom eProcurement | Procure-to-Pay Spend Management</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="description" content="Puridiom eProcurement provides procure-to-pay spend management solutions for medium to large organizations. Modular, easy-to-use software." />
+  <meta name="keywords" content="puridiom,procure-to-pay,procure to pay,eprocurement,e procurement,procure-to-pay software,procure to pay solutions, TSA" />
+  <meta name="author" content="Puridiom">
+
+
+  <!--Icons-->
+  <link rel="icon" type="image/vnd.microsoft.icon" href="backend_resources/images/favicon/favicon.ico">
+  <link rel="SHORTCUT ICON" href="backend_resources/images/favicon/favicon.ico" />
+
+
+  <!--CSS-->
+  <!--<link rel="stylesheet" href="backend_resources/css/style.css">-->
+  <link rel="stylesheet" href="backend_resources/css/style-new.css">
+  <link rel="stylesheet" href="April/new.css">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet" type="text/css">
+
+  <!--Slick Carousel Styles-->
+  <link rel="stylesheet" type="text/css" href="backend_resources/slick-carousel/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="backend_resources/slick-carousel/slick/slick-theme.css"/>
+
+</head>
+
+<!--Navigation-->
+<body>
+
+  <div class="navigation" id="top" ng-app="puridiom" ng-controller="MainController">
+    <nav>
+      <h1>
+        <a href="index_new.html"><img src="backend_resources/images/logo/p-logo.png" alt="Puridiom"/></a>
+        <div class="holiday">
+          <img src="April/puridiom_holiday_big.png" alt="Holiday Season" />
+        </div>
+      </h1>
+      <!--To insert tab login menu, simply change the links below as appropriate, and then remove the "style" attribute on the below login menu div.  In addition, visit navbar.scss and change the marked "top" position attribute as directed. (Mobile->nav->ul.active)-->
+      <div class="login-menu" style="display: none;">
+        <div class="login-tab"><a href="#">For Suppliers</a></div>
+        <div class="login-tab"><a href="#">For Buyers</a></div>
+        <div class="login-tab"><a href="#">Login</a></div>
+      </div>
+      <!--Below toggles the "Menu" button so that it only appears while the screen is in a mobile mode, as well as opens it on a click event. For further, see the main controller.-->
+      <div ng-class="{'toggle mobile': !isActive, 'toggle mobile active': isActive}" ng-init="isActive = false" ng-click="isActive = !isActive">
+        <a class="toggle mobile">MENU</a>
+      </div>
+      <ul ng-class="{'': !isActive, 'active': isActive}">
+        <li><a href="about.html">About Us</a>
+          <ul>
+            <li><a href="about_partners.html">About Our Partners</a></li>
+            <li><a href="about_contact.html">Contact Us</a></li>
+          </ul></li>
+          <li class="solutions_nav"><a href="solutions_new.html">Solutions</a>
+            <div class="sub_nav_container">
+              <ul class="sub_nav_column">
+                <li class="sub_nav_module"><a href="workflow-manager.html"><span class="nav_subheader">Workflow Manager</span></a>
+                  <ul class="sub_nav_module_list">
+                  <li class="sub_nav_item"><a href="workflow-manager.html#requests">Requests</a></li>
+                  <li class="sub_nav_item"><a href="workflow-manager.html#budget-control">Budget Control</a></li>
+                  <li class="sub_nav_item"><a href="workflow-manager.html#approvals">Approvals</a></li>
+                  <li class="sub_nav_item"><a href="workflow-manager.html#standard-catalog-management">Standard Catalog Management</a></li>
+                  <li class="sub_nav_item"><a href="workflow-manager.html#punchout-catalog-management">Punchout Catalogs</a></li>
+                  <li class="sub_nav_item"><a href="workflow-manager.html#expense-manager">Expense Manager</a></li>
+                </ul>
+              </li>
+                <li class="sub_nav_module"><a href="sourcing_new.html"><span class="nav_subheader">Sourcing</span></a>
+                  <ul class="sub_nav_module_list">
+                  <li class="sub_nav_item"><a href="sourcing_new.html#supplier-registration-profile-management">Supplier Registration and Profile Management</a></li>
+                  <li class="sub_nav_item"><a href="sourcing_new.html#rfx-management">RFx Management</a></li>
+                  <li class="sub_nav_item"><a href="sourcing_new.html#sourcing-portal">Sourcing Portal</a></li>
+                </ul>
+                </li>
+              </ul>
+            <ul class="sub_nav_column">
+              <li class="sub_nav_module"><a href="ap-automation.html"><span class="nav_subheader">AP Automation</span></a>
+                <ul class="sub_nav_module_list">
+                  <li class="sub_nav_item"><a href="ap-automation.html#e-invoice-processing">eInvoice Processing</a></li>
+                  <li class="sub_nav_item"><a href="ap-automation.html#invoice-matching">Invoice Matching</a></li>
+                  <li class="sub_nav_item"><a href="ap-automation.html#invoice-scanning-extraction">Invoice Scanning</a></li>
+                  <li class="sub_nav_item"><a href="ap-automation.html#payment">Payment</a></li>
+                </ul>
+              </li>
+                <li class="sub_nav_module"><a href="supplier-hub.html"><span class="nav_subheader">Supplier Hub</span></a>
+                  <ul class="sub_nav_module_list">
+                  <li class="sub_nav_item"><a href="supplier-hub.html#supplier-registration-profile-management">Supplier Registration & Profile Management</a></li>
+                  <li class="sub_nav_item"><a href="supplier-hub.html#sourcing-portal">Sourcing Portal</a></li>
+                  <li class="sub_nav_item"><a href="supplier-hub.html#advanced-catalog-content-management">Advanced Catalog Content Management</a></li>
+                  <li class="sub_nav_item"><a href="supplier-hub.html#e-invoice-processing">eInvoice Processing</a></li>
+                  <li class="sub_nav_item"><a href="supplier-hub.html#dynamic-discounting">Dynamic Discounting</a></li>
+                </ul>
+              </li>
+            </ul>
+              <ul class="sub_nav_column" style="padding-right:0px;">
+                <li class="sub_nav_module"><a href="plan-to-pay.html"><span class="nav_subheader">Plan-to-Pay</span></a>
+                  <ul class="sub_nav_module_list">
+                  <li class="sub_nav_item"><a href="plan-to-pay.html#workflow-manager">Workflow Manager</a></li>
+                  <li class="sub_nav_item"><a href="plan-to-pay.html#order-management">Order Management</a></li>
+                  <li class="sub_nav_item"><a href="plan-to-pay.html#contract-management">Contract Management</a></li>
+                  <li class="sub_nav_item"><a href="plan-to-pay.html#rfx-managment">RFx Management</a></li>
+                  <li class="sub_nav_item"><a href="plan-to-pay.html#receiving">Receiving</a></li>
+                  <li class="sub_nav_item"><a href="plan-to-pay.html#invoice-matching">Invoice Matching</a></li>
+                  <li class="sub_nav_item"><a href="plan-to-pay.html#inventory-manager">Inventory Manager</a></li>
+                  <li class="sub_nav_item"><a href="plan-to-pay.html#asset-tracker">Asset Tracker</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="services.html">Services</a>
+          <!--<div class="sub_nav_container smaller">
+            <ul class="sub_nav_column">
+              <li class="sub_nav_module"><a href""><span class="nav_subheader">Supplier Management</span></a>
+                <ul class="sub_nav_module_list">
+                  <li class="sub_nav_item"><a href"">Levels of Support</a>
+                  </li>
+                  <li class="sub_nav_item"><a href"">Training</a>
+                  </li>
+                  <li class="sub_nav_item"><a href"">Implementation</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="sub_nav_module"><a href""><span class="nav_subheader">Supplier Data<br>Enrichment</span></a>
+                <ul class="sub_nav_module_list">
+                  <li class="sub_nav_item"><a href"">D&amp;B Data Diversity &amp; Risk Assessment</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="sub_nav_column">
+              <li class="sub_nav_module"><a href""><span class="nav_subheader">Business Process Outsourcing</span></a>
+                <ul class="sub_nav_module_list">
+                  <li class="sub_nav_item"><a href"">Consulting</a>
+                  </li>
+                  <li class="sub_nav_item"><a href"">Staff Augmentation</a>
+                  </li>
+                  <li class="sub_nav_item"><a href"">Spend Analytics</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="sub_nav_module"><a href""><span class="nav_subheader">Supplier Enablement</span></a>
+                <ul class="sub_nav_module_list"><a href""></a>
+                </ul>
+              </li>
+            </ul>
+
+          </div>-->
+          <ul>
+            <li><a href="services_platforms.html">Platforms</a></li>
+            <li><a href="services_marketplace.html">Marketplace</a></li>
+            <li><a href="services_outsourcing.html">Outsourcing</a></li>
+            <li><a href="services_supplier_enablement.html">Supplier Enablement</a></li>
+            <li><a href="services_support.html">Support</a></li>
+            <li><a href="services_integration.html">Integration</a></li>
+            <li><a href="services_implementation.html">Implementation</a></li>
+            <li><a href="services_training.html">Training</a></li>
+          </ul>
+          </li>
+          <li><a href="resources.html">Resource Center</a>
+            <ul>
+              <li><a href="resources.html#whitepaper">White Papers</a></li>
+              <li><a href="resources.html#casestudies">Case Studies</a></li>
+              <li><a href="resources.html#benchmarks">Benchmark Reports</a></li>
+              <li><a href="resources.html#datasheets">Data Sheets</a></li>
+              <li><a href="resources.html#podcasts">Podcasts</a></li>
+              <li><a href="resources.html#webcasts">Webcasts</a></li>
+            </ul></li>
+            <li><a href="pressroom.html">Press Room</a>
+              <ul>
+                <li><a href="pressroom_events.html">Events</a></li>
+                <li><a href="http://www.puridiom.co/blog/">Blog</a></li>
+                <li><a href="http://www.puridiom.com/video-page.html">Videos</a></li>
+              </ul></li>
+            </ul>
+          </nav>
+        </div>
+        <!--Slider-->
+        <ul class="container slider" id="slider" name="slider">
+        	<li class="row activeSlide">
+        		<a href="http://post.puridiom.com/acton/media/5671/collaborative-procurement-report-rc">
+        			<div class="first-col">
+        				<img src="backend_resources/images/collab-proc-report.png" class="slide smaller uniqueSlide6" alt="Puridiom Collaborative Procurement Report"/>
+        			</div>
+        			<div class="second-col">
+        				<div class="sliderText uniqueSlide6">
+        					<p class='bold sans text-29 black'>Collaborative Procurement<span class="medium-small-screen-only"><br></span> Report<br>
+        						<span class="text-25 mobileNoShow medium-small-screen-no-show">Driving Influence and Results through<span class="medium-screen-only"><br></span> Relationships<br></span>
+        						<span class="blue text-25">Ardent Partners Research</span><br>
+        						<span class='orange text-25'>Read the Report Here</span></p>
+        					<p class='bold sans text-25'></p>
+        				</div>
+        			</div>
+        		</a>
+        	</li>
+        	<li class="row hiddenSlide">
+        		<a href="https://event.on24.com/eventRegistration/EventLobbyServlet?target=reg20.jsp&eventid=931796&sessionid=1&key=9ECC54EA71CA91157539F1BBB7C58A7A&sourcepage=register">
+        			<div class="first-col">
+        				<img src="backend_resources/images/events/procurement-and-your-suppliers.png" class="slide smaller uniqueSlide3" alt="Procurement and your Suppliers"/>
+        			</div>
+        			<div class="second-col">
+        				<div class="sliderText uniqueSlide3">
+        					<p class='bold sans text-29 black'><span class="mobileNoShow">Webinar: Procurement and <span class="medium-small-screen-only"><br></span>your Suppliers</span>
+        						<span class="mobileOnly text-29">Webinar: Procurement and your Suppliers</span><br>
+        						<span class='blue text-25'>August 19, 2015<br> 1 PM EDT |
+        							<span class="medium-small-screen-no-show"> 12 PM CDT |</span><span class="medium-small-screen-no-show">  11 AM MT |</span> 10 AM PT</span><br>
+        						<span class='orange text-25'>Find Out More!</span></p>
+        					<p class='bold sans text-25'></p>
+        				</div>
+        			</div>
+        		</a>
+        	</li>
+          <li class="row hiddenSlide">
+        			<div class="first-col" style="position: absolute; z-index:1">
+        				<a href="#mydiv" class="html5lightbox" data-width="640" data-height="360">
+        				<img src="backend_resources/images/pugc-2016-video-snip.JPG" class="slide smaller uniqueSlide2" alt="Puridiom User Group Conference 2015"/></img>
+
+        			<div id="mydiv" style="display:none;">
+        			<div style="width:100%;height:100%;text-align:center;">
+        			<div style="width:40%;height:100%;text-align:center;">
+        				<div style="width:60%;height:100%;text-align:center;">
+        						<iframe src="https://player.vimeo.com/video/137373041?autoplay=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="https://vimeo.com/137373041">PUGC 2016</a> from <a href="https://vimeo.com/puridiom">Puridiom eProcurement</a> on <a href="https://vimeo.com">Vimeo</a>.</p></iframe>
+        						<div style="clear:both;"></div>
+        				</div>
+        			</div>
+        			</div>
+        		</div>
+        		</a>
+        	</div>
+        			<div class="second-col" style="position: absolute; z-index:0">
+        				<div class="sliderText uniqueSlide2">
+        					<a href="pugc2015.html">
+        					<p class='bold sans text-29 black'>The Power of Five<br>
+        						<span class="mobileNoShow">Puridiom User Group <span class="medium-small-screen-only"><br></span>Conference</span>
+        						<span class="mobileOnly text-25">Puridiom User Group<br> Conference</span><br>
+        						<span class='blue text-25'><span class="mobileNoShow medium-small-screen-no-show">Join Team Puridiom in </span><span class="medium-small-screen-no-show">Hershey, PA<br></span>
+        							May 1-3, 2016</span><br>
+        						<span class='orange text-25'>Find Out More!</span></p></a>
+        					<p class='bold sans text-25'></p>
+        				</div>
+        		</div>
+        	</li>
+        	<li class="row hiddenSlide">
+        		<a href="http://post.puridiom.com/acton/media/5671/collaborative-procurement-ondemand-home">
+        			<div class="first-col">
+        				<img src="backend_resources/images/collaborative-procurement-view-now.png" class="slide smaller uniqueSlide1" alt="Collaborative Procurement"/>
+        			</div>
+        			<div class="second-col">
+        				<div class="sliderText uniqueSlide1">
+        					<p class='bold sans text-25'> <span class="text-29"> Collaborative Procurement<span class="medium-small-screen-only"><br></span> Webinar</span>
+        						<span class='bold sans text-25 blue mobileNoShow'><br>Using Relationships to Drive <br> Influence and Results<br>June 2015</span><br>
+        					<span class='orange'>View On Demand!</span></p>
+        					<p class='bold sans text-25'></p>
+        				</div>
+        			</div>
+        		</a>
+        	</li>
+        	<li class="row hiddenSlide">
+        		<a href="http://www.puridiom.co/blog/100-great-supply-chain-projects">
+        			<div class="first-col">
+        				<img src="backend_resources/images/banner/SDC-100-Logo-2015-small.png" class="slide smaller uniqueSlide0" alt="2015 Top 100 SDCE Solution Provider "/>
+        			</div>
+        			<div class="second-col">
+        				<div class="sliderText uniqueSlide0">
+        					<p class='bold sans text-29'>2015 SDCE Top 100 Solution<span class="medium-small-screen-only"><br></span> Provider<br>
+        						<span class='blue'>Top 100 Supply Chain <span class="mobileOnly"><br></span> Projects</span>
+        						<span class='black text-25 mobileNoShow medium-small-screen-no-show'><br>Procure-to-Pay Tools<br>Best Practices<br>One Solution</span>
+        						<br><span class='orange text-25'>Read the Article Here</span></p>
+        				</div>
+        			</div>
+        		</a>
+        	</li>
+        	<!--
+        	<li class="row hiddenSlide">
+        		<a href="http://www.puridiom.co/blog/?p=2144">
+        			<div class="first-col">
+        				<img src="backend_resources/images/logo-certs/ptk-15.png" class="slide smaller" alt"Pro-to-Know: Meredith of Puridiom"/>
+        			</div>
+        			<div class="second-col">
+        				<div class="sliderText uniqueSlide4">
+        					<p class='bold sans text-25 black'>Procurement Questions?</p>
+        					<p class='bold sans text-25 orange'>Ask our Pro-to-Know Experts</p>
+        					<p class='bold sans text-20 blue'>"We are here to answer your questions about Procurement process, <br>
+        						 strategy, technology and best practices."
+        				</div>
+        			</div>
+        		</a>
+        	</li>
+        	<li class="row hiddenSlide">
+        		<a href="resources.html">
+        			<div class="first-col">
+        				<img src="backend_resources/images/Cindy-new.jpg" class="slide" alt="Cindy of Puridiom"/>
+        			</div>
+        			<div class="second-col">
+        				<div class="sliderText uniqueSlide5">
+        					<p class='bold sans text-20 orange'>Need more information?</p>
+        					<p class='bold sans text-25'>Check out our Procurement Resources Library.</p>
+        				</div>
+        			</div>
+        		</a>
+        	</li>-->
+        </ul>
+        <div class="row sliderCtrl" id="sliderCtrl"></div>
+                <!--Middle Section-->
+                <!--Multicolor CTAs in a carousel slider-->
+                <section class="container main-section">
+                  <!--Information Paragraph-->
+                  <div class="row" style="padding-top: 15px;">
+                    <div class="twelve columns">
+                      <p class="lato text-17"><span class="x-bold orange text-18">Puridiom Procurement & AP Solutions and Services</span> automate and centralize purchasing and AP functions. An in-depth solution, Puridiom seeks out every savings opportunity, from planning requisitions through payment, and helps organizations maximize the bottom line.</p>
+                      <h1 class="sans bold">I want to learn about...</h1>
+                    </div>
+                  </div>
+                  <!--Orange Menu, learn, "I want to learn about"-->
+                  <div class="row orange-main-menu learn">
+                    <div class="three columns">
+                      <a href="solutions.html"><p>...procurement and AP solutions</p></a>
+                    </div>
+                    <div class="three columns">
+                      <a href="services.html"><p>...services that enhance procurement & AP processes!</p></a>
+                    </div>
+                    <div class="three columns">
+                      <a href="resources.html"><p>...the latest procurement research.</p></a>
+                    </div>
+                    <div class="three columns">
+                    <a href="procure-to-pay/index.html"><p>...Puridiom in action!</p></a>
+                    </div>
+                  </div>
+                </section>
+                <!--Blue Section-->
+                <section class="container blue-section">
+                  <div class="row">
+                    <div class="twelve columns">
+                      <h2 class="text-46 white bold sans caps center">Solutions</h2>
+                      <h4 class="bold sans center light-orange text-29" style="margin-top: 1%;">Select flexible modules that serve your needs</h4>
+                      <hr class="bold-light-orange-line" />
+                    </div>
+                  </div>
+                  <!--Solutions Row-->
+                    <div class="row cta_carousel blue-menu" style="margin-top: 2%; margin-bottom: 6%;">
+                      <div class="six columns" >
+                        <a href="workflow-manager.html" class="black nounderline">
+                          <img src="backend_resources/images/icons/solutions/p2p.png" />
+                          <hr class="black-line">
+                          Workflow Manager
+                        </a>
+                      </div>
+                      <div class="six columns">
+                        <a href="plan-to-pay.html" class="black nounderline">
+                          <img src="backend_resources/images/icons/solutions/invoice.png" />
+                          <hr class="black-line">
+                          Plan-To-Pay
+                        </a>
+                      </div>
+                      <div class="six columns">
+                        <a href="supplier-hub.html" class="black nounderline">
+                          <img src="backend_resources/images/icons/solutions/outsource.png" />
+                          <hr class="black-line">
+                          Supplier Hub
+                        </a>
+                      </div>
+                      <div class="six columns">
+                        <a href="ap-automation.html" class="black nounderline">
+                          <img src="backend_resources/images/icons/solutions/ap.png" />
+                          <hr class="black-line">
+                          AP Automation
+                        </a>
+                      </div>
+                      <div class="six columns">
+                        <a href="sourcing_new.html" class="black nounderline">
+                          <img src="backend_resources/images/icons/solutions/sourcing.png" />
+                          <hr class="black-line">
+                          Sourcing
+                        </a>
+                      </div>
+                    </div>
+
+                  <!--Blue Menu: Row 1-->
+                  <!--<div class="row blue-menu">
+                    <div class="two columns push_one">
+                      <a href="solutions_eprocurement.html"><img src="backend_resources/images/icons/solutions/eproc.png" alt="eProcurement Platforms">
+                        <hr class="black-line" />eProcurement<br />Platforms</a>
+                      </div>
+                      <div class="two columns">
+                        <a href="solutions_procure_to_pay.html"><img src="backend_resources/images/icons/solutions/p2p.png" alt="Enterprise Procure to Pay">
+                          <hr class="black-line" />Enterprise<br /> Procure-to-Pay</a>
+                        </div>
+                        <div class="two columns">
+                          <a href="solutions_mobile.html"><img src="backend_resources/images/icons/solutions-p2p/mobile.png" alt="Mobile">
+                            <hr class="black-line" />Mobile</a>
+                          </div>
+                          <div class="two columns">
+                            <a href="solutions_esourcing.html"><img src="backend_resources/images/icons/solutions/sourcing.png" alt="Strategic Sourcing">
+                              <hr class="black-line" />Strategic<br /> Sourcing</a>
+                            </div>
+                            <div class="two columns">
+                              <a href="solutions_contract_management.html"><img src="backend_resources/images/icons/solutions/contract.png" alt="Contract Management"><hr class="black-line" />Contract<br /> Management</a>
+                            </div>
+                          </div>-->
+                          <!--Blue Menu: Row 2-->
+                          <!--<div class="row blue-menu">
+                            <div class="two columns push_one">
+                              <a href="solutions_invoicing.html"><img src="backend_resources/images/icons/solutions/invoice.png" alt="Invoice Automation">
+                                <hr class="black-line" />Invoice<br /> Automation</a>
+                              </div>
+                              <div class="two columns">
+                                <a href="solutions_outsourcing.html"><img src="backend_resources/images/icons/solutions/outsource.png" alt="Outsourcing">
+                                  <hr class="black-line" />Outsourcing</a>
+                                </div>
+                                <div class="two columns">
+                                  <a href="solutions_accounts_payable.html"><img src="backend_resources/images/icons/solutions/ap.png" alt="Accounts Payable">
+                                    <hr class="black-line" />Accounts Payable</a>
+                                  </div>
+                                  <div class="two columns">
+                                    <a href="solutions_inventory.html"><img src="backend_resources/images/icons/solutions/inventory.png" alt="Inventory Management">
+                                      <hr class="black-line" />Inventory<br /> Management</a>
+                                    </div>
+                                    <div class="two columns">
+                                      <a href="solutions_travel_management.html"><img src="backend_resources/images/icons/solutions/travel.png" alt="Travel">
+                                        <hr class="black-line" />Travel</a>
+                                      </div>
+                                    </div>-->
+                                    <!--Further Information-->
+                                    <div class="row">
+                                      <div class="twelve columns text-20 black helv">
+                                        <p><span class="bold white">Puridiom</span> is the most comprehensive Procure-to-Pay solution provider to offer its procurement software in the Cloud and Licensed platforms for organizations of all sizes and industries.</p>
+                                        <p><span class="bold white">With innovative technologies</span>, dynamic personalized services and extensive domain experience, Puridiom has streamlined functions in the supply chain since 1983.</p>
+                                        <p><span class="bold white">The easy-to-use purchasing software + straightforward strategies</span> enable organizations to gain a competitive position and transform business into a strategic resource savings solution.</p>
+                                        <hr class="white-line" />
+                                      </div>
+                                    </div>
+                                  </section>
+
+                                  <!--Platforms Section-->
+                                  <section class="container white-section">
+                                    <div class="row">
+                                      <h2 class="sans caps center bold text-46">Platforms</h2>
+                                    </div>
+                                    <div class="row" style="margin-top: 1%;">
+                                  		<div class="twelve columns">
+                                  			<h4 class="sans bold orange center text-29">Choose your preferred method of delivery</h4>
+                                  			<hr class="bold-orange-line">
+                                  		</div>
+                                  	</div>
+                                  	<div class="row service-platforms-menu blue">
+                                  		<div class="four columns">
+                                  			<a href="services_platforms.html#cloud"><img src="backend_resources/images/icons/services/cloud.png" alt="Cloud Implementation"/><h3>Cloud</h3><p>Quicker Deployment<br /> Lower Overall Cost</p></a>
+                                  		</div>
+                                  		<div class="four columns">
+                                  			<a href="services_platforms.html#on-premise"><img src="backend_resources/images/icons/services/licensed.png" alt="On-Premise Implementation"/><h3>On-Premise</h3><p>More Control of Software<br />  Fewer Integration Challenges</p></a>
+                                  		</div>
+                                  		<div class="four columns hide-mobile">
+                                  			<a href="services_platforms.html#hybrid
+                                        "><img src="backend_resources/images/icons/services/platforms-64.png" alt="Hybrid Implementation"/><h3>Hybrid</h3><p>Modular Integration<br />Cloud and On-Premise Hosting </p></a>
+                                  		</div>
+                                  	</div>
+                                  </section>
+                                  <!--Services Section-->
+                                  <!--<section class="container blue-section">
+                                  <div class="row">
+                                    <h2 class="sans center bold caps white text-46">Services</h2>
+                                  </div>
+                                  <div class="row">
+                                    <div class="twelve columns">
+                                      <h4 class="sans bold light-orange center text-29" style="margin-top: 1%;">Enhance the procurement process with these ways to save.</h4>
+                                      <hr class="bold-light-orange-line">
+                                    </div>
+                                    <div class="row cta_carousel blue-menu" style="margin-top: 10%; margin-bottom: 6%;">
+                                      <div class="six columns" >
+                                        <a href="workflow-manager.html" class="black nounderline">
+                                          <img src="backend_resources/images/icons/solutions/p2p.png" />
+                                          <hr class="black-line">
+                                          Supplier<br>Management
+                                        </a>
+                                      </div>
+                                      <div class="six columns">
+                                        <a href="plan-to-pay.html" class="black nounderline">
+                                          <img src="backend_resources/images/icons/solutions/invoice.png" />
+                                          <hr class="black-line">
+                                          Business Process Outsourcing
+                                        </a>
+                                      </div>
+                                      <div class="six columns">
+                                        <a href="supplier-hub.html" class="black nounderline">
+                                          <img src="backend_resources/images/icons/solutions/outsource.png" />
+                                          <hr class="black-line">
+                                          Supplier Data Enrichment
+                                        </a>
+                                      </div>
+                                      <div class="six columns">
+                                        <a href="ap-automation.html" class="black nounderline">
+                                          <img src="backend_resources/images/icons/solutions/ap.png" />
+                                          <hr class="black-line">
+                                          Supplier Enablement
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </section>-->
+
+                                  <!--Slide up CTA-->
+                                  <div class="slide-in-CTA">
+                                  	<div class="container row" style="border-top:6px solid #ffa500; padding-top: 5px; padding-left: 5px;">
+                                  	<div class="four columns">
+                                  		<h3 class="open-sans blue bold center text-25">Sign up for our User Group!!</h3>
+                                  		<p class="black center text-18">May 1-3, 2016</p>
+                                  		<div class="cta slide-in-button">
+                                  			<a href="pugc2015.html" style=" border-radius: 15px;">
+                                  				<span class="white">Find out More!</span></a>
+                                  		</div>
+                                  	</div>
+                                  	<div class="three columns slide-in-img">
+                                  		<img src="backend_resources/images/puridiom-man-big-five-small.png"></img>
+                                  	</div>
+                                  	<div class="one column delete-popup" style="width: 1%; margin-left: -8px;">
+                                  	<a class=""><img height="20" width="20" src="backend_resources/images/icons/delete-sign-icon.png"></img>
+                                  	</a>
+                                  	</div>
+                                  </div>
+                                  </div>
+
+                                  <!--Footer-->
+                                  <div class = "container footer">
+                                    <!--The below section will be hidden when in mobile view.-->
+                                    <div class = "row hide-mobile">
+                                      <div class = "push_two two columns logo">
+                                        <a href = "index.html"><img src = "backend_resources/images/logo/p-nu-vert.png" alt="Puridiom Home"></a>
+                                      </div>
+                                      <div class = "one columns footernav">
+                                        <ul>
+                                          <a href="about.html"><li>Company</li></a>
+                                          <a href="solutions.html"><li>Solutions</li></a>
+                                          <a href="services.html"><li>Services</li></a>
+                                          <a href="resources.html"><li>Resources</li></a>
+                                          <a href="http://www.puridiom.co/blog/"><li>Blog</li></a>
+                                          <a href="http://www.puridiom.com/privacy/"><li>Privacy</li></a>
+                                        </ul>
+                                      </div>
+                                      <div class = "three columns">
+                                        <ul class="contact">
+                                          <a href = "about_contact.html">
+                                          <li>395 St. John's Church Rd</li>
+                                          <li>Suite 101</li>
+                                          <li>Camp Hill, PA 17011</li></a>
+                                            <li class = "contact">Toll Free: 800-388-1415</li>
+                                            <li class = "contact">Phone: 717-691-5691</li>
+                                            <li class = "contact">Fax: 717-691-5690</li>
+                                          </div>
+                                          <div class = "one columns">
+                                            <ul>
+                                              <a href="https://www.facebook.com/Puridiom"><li><img src="backend_resources/images/icons/social/facebook-grey.png" alt="Puridiom on Facebook"></li></a>
+                                              <a href="https://twitter.com/PuridiomPros"><li><img src="backend_resources/images/icons/social/twitter-grey.png" alt="Puridiom on Twitter"></li></a>
+                                              <a href="http://www.linkedin.com/company/puridiom"><li><img src="backend_resources/images/icons/social/linkedin-grey.png" alt="Puridiom on LinkedIn"></li></a>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                        <!--The below section will be revealed in mobile view. It is similar to the above, but removes some information and makes it into one column.-->
+                                        <div class="mobile-show">
+                                          <div class="logo">
+                                            <a href = "index.html"><img src = "backend_resources/images/logo/p-nu-vert.png" alt="Puridiom Home"></a>
+                                          </div>
+                                          <div>
+                                            <div>
+                                              <a href="https://www.facebook.com/Puridiom"><img src="backend_resources/images/icons/social/facebook-grey.png" alt="Puridiom on Facebook"></a>
+                                            </div>
+                                            <div>
+                                              <a href="https://twitter.com/PuridiomPros"><img src="backend_resources/images/icons/social/twitter-grey.png" alt="Puridiom on Twitter"></a>
+                                            </div>
+                                            <div>
+                                              <a href="http://www.linkedin.com/company/puridiom"><img src="backend_resources/images/icons/social/linkedin-grey.png" alt="Puridiom on LinkedIN"></a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <!--JS-->
+                                      <!--Slick Carousel JS-->
+                                      <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+                                      <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+                                      <script type="text/javascript" src="backend_resources/slick-carousel/slick/slick.min.js"></script>
+                                      <script type="text/javascript" src="backend_resources/slick-carousel/slick/slick-slides.js"></script>
+                                      <script src="backend_resources/angular/slide-popup.js" type="text/javascript"></script>
+                                      <script type="text/javascript" src="backend_resources/angular/html5lightbox/html5lightbox.js"></script>
+
+                                      <!--Angular Version 1.2.17-->
+                                      <script src="backend_resources/angular/angular.js" type="text/javascript"></script>
+                                      <script src="backend_resources/angular/angular-animate.js" type="text/javascript"></script>
+                                      <script type="text/javascript" src="backend_resources/angular/slider.js"></script>
+
+                                      <!--angular animate is necessary to make the slider animate-->
+                                      <script src="backend_resources/angular/controllers.js" type="text/javascript"></script>
+                                      <script src="backend_resources/angular/resourcesController.js" type="text/javascript"></script>
+                                      <!--Res controller is separate because it contains the data for all of the resources/resource blocks. Use the resource controller to add new data to this page by following the format specified.-->
+
+                                      <!-- Start of Async HubSpot Analytics Code -->
+                                      <script type="text/javascript">
+                                      (function(d,s,i,r) {
+                                      if (d.getElementById(i)){return;}
+                                      var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+                                      n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/736525.js';
+                                      e.parentNode.insertBefore(n, e);
+                                      })(document,"script","hs-analytics",300000);
+                                      </script>
+                                      <!-- End of Async HubSpot Analytics Code -->
+
+                                    </body>
+                                    </html>

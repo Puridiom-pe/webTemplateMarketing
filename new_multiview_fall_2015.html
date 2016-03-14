@@ -1,0 +1,321 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ content.html_title }}</title>
+        <meta name="description" content="{{ content.meta_description }}">
+        {{ standard_header_includes }}
+    </head>
+    <body>
+    <style type="text/css">
+.container.blue-section .row .four.columns h2 {
+  color: #F90;
+}
+</style>
+<p style="height:0px;margin:0px;padding:0px;width:0px;"><meta content="user-scalable=0, initial-scale=1.0" name="viewport" />
+  <title>Puridiom</title>
+  <link href="http://puridiom.com/backend_resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet" type="text/css" /></p>
+
+  <section class="container main-section" style="padding-top: 10px; padding-bottom: 25px; background-color: #dadada;">
+    <div class="row">
+      <div class="four columns"> <a href="http://puridiom.com" target="_blank"><img style="width:auto;" src="http://puridiom.com/backend_resources/images/logo/p-logo.png"style="margin-top: 5%;"/></img></a>
+      </div>
+      <div class="eight columns">
+        <h2 class="text-39 black bold sans caps center" style="margin-top: 13px;">Procure-to-Pay </h2>
+        <h2 class="text-39 black bold sans caps center">Solutions &amp; Services</h2>
+      </div>
+    </div>
+  </section>
+
+  <div class="navigation" id="top" ng-app="puridiom" ng-controller="MainController" style="
+  padding-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  ">
+  <nav>
+
+    <!--To insert tab login menu, simply change the links below as appropriate, and then remove the "style" attribute on the below login menu div.  In addition, visit navbar.scss and change the marked "top" position attribute as directed. (Mobile->nav->ul.active)-->
+    <div class="login-menu" style="display: none;">
+      <div class="login-tab"><a href="#">For Suppliers</a></div>
+      <div class="login-tab"><a href="#">For Buyers</a></div>
+      <div class="login-tab"><a href="#">Login</a></div>
+    </div>
+    <!--Below toggles the "Menu" button so that it only appears while the screen is in a mobile mode, as well as opens it on a click event. For further, see the main controller.-->
+    <div ng-class="{'toggle mobile': !isActive, 'toggle mobile active': isActive}" ng-init="isActive = false" ng-click="isActive = !isActive">
+      <a class="toggle mobile">MENU</a>
+    </div>
+    <ul ng-class="{'': !isActive, 'active': isActive}" style="border-color: #FFF;">
+      <li><a href="http://puridiom.com/about.html">About Us</a>
+        <ul>
+          <li><a href="http://puridiom.com/about_partners.html">About Our Partners</a></li>
+          <li><a href="http://puridiom.com/about_contact.html">Contact Us</a></li>
+        </ul></li>
+        <li><a href="http://puridiom.com/solutions.html">Solutions</a>
+          <ul>
+            <li><a href="http://puridiom.com/solutions_eprocurement.html">eProcurement</a></li>
+            <li><a href="http://puridiom.com/procure-to-pay/index.html">Procure-to-Pay</a></li>
+            <li><a href="http://puridiom.com/solutions_mobile.html">Mobile</a></li>
+            <li><a href="http://puridiom.com/solutions_sourcing.html">Sourcing</a></li>
+            <li><a href="http://puridiom.com/solutions_contract_management.html">Contract Management</a></li>
+            <li><a href="http://puridiom.com/solutions_invoicing.html">Invoicing</a></li>
+            <li><a href="http://puridiom.com/solutions_outsourcing.html">Outsourcing</a></li>
+            <li><a href="http://puridiom.com/solutions_accounts_payable.html">Accounts Payable</a></li>
+            <li><a href="http://puridiom.com/solutions_inventory.html">Inventory</a></li>
+            <li><a href="http://puridiom.com/solutions_travel_management.html">Travel Management</a></li>
+          </ul></li>
+          <li><a href="http://puridiom.com/services.html">Services</a>
+            <ul>
+              <li><a href="http://puridiom.com/services_platforms.html">Platforms</a></li>
+              <li><a href="http://puridiom.com/services_marketplace.html">Marketplace</a></li>
+              <li><a href="http://puridiom.com/services_outsourcing.html">Outsourcing</a></li>
+              <li><a href="http://puridiom.com/services_supplier_enablement.html">Supplier Enablement</a></li>
+              <li><a href="http://puridiom.com/services_support.html">Support</a></li>
+              <li><a href="http://puridiom.com/services_integration.html">Integration</a></li>
+              <li><a href="http://puridiom.com/services_implementation.html">Implementation</a></li>
+              <li><a href="http://puridiom.com/services_training.html">Training</a></li>
+            </ul></li>
+            <li><a href="http://puridiom.com/resources.html">Resource Center</a>
+              <ul>
+                <li><a href="http://puridiom.com/resources.html#whitepaper">White Papers</a></li>
+                <li><a href="http://puridiom.com/resources.html#casestudies">Case Studies</a></li>
+                <li><a href="http://puridiom.com/resources.html#benchmarks">Benchmark Reports</a></li>
+                <li><a href="http://puridiom.com/resources.html#datasheets">Data Sheets</a></li>
+                <li><a href="http://puridiom.com/resources.html#podcasts">Podcasts</a></li>
+                <li><a href="http://puridiom.com/resources.html#webcasts">Webcasts</a></li>
+              </ul></li>
+              <li><a href="http://puridiom.com/pressroom.html">Press Room</a>
+                <ul>
+                  <li><a href="http://puridiom.com/pressroom_events.html">Events</a></li>
+                  <li><a href="http://www.puridiom.co/blog/">Blog</a></li>
+                  <li><a href="http://puridiom.com/video-page.html">Videos</a></li>
+                </ul></li>
+              </ul>
+            </nav>
+          </div>
+          <section class="container blue-section">
+            <div class="row">
+              <h1 class="sans bold white text-42 caps center">Transform Procurement With... </h1>
+            </div>
+            <div class="row">
+              <h2 style="visibility: hidden;">Spacer</h2>
+            </div>
+            <div class="row">
+              <div class="three columns" style="padding-left: 20px; padding-right:20px;" >
+
+              <div class="row multiview-image">
+                <img src="http://puridiom.com/backend_resources/images/multiview/multiview-piggy-bank.jpg"></img>
+              </div>
+              <div class="row">
+              <div class="twelve columns">
+                <div class="slider-cta multiview-cta">
+                  <a href="http://puridiom.com/solutions_procure_to_pay.html" class="black nounderline sans text-29" style="font-weight: normal;">
+                    Increased<br>Spend Visibility
+                  </a>
+              </div>
+              </div>
+            </div>
+          </div>
+              <div class="three columns" style="padding-left: 20px; padding-right:20px;">
+
+                <div class="row multiview-image">
+                  <img src="http://puridiom.com/backend_resources/images/multiview/weights-multiview.jpg"></img>
+                </div>
+                  <div class="row">
+                  <div class="twelve columns">
+                    <div class="slider-cta multiview-cta">
+                      <a href=" http://info.puridiom.com/managing-your-suppliers?utm_campaign=Multiview%20Targeted%20Banners&utm_medium=banner%20ad&utm_source=Connect%20with%20your%20Supplier" class="black nounderline sans text-29" style="font-weight: normal;">
+                        Better Supplier Relationships
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="three columns" style="padding-left: 20px; padding-right:20px;">
+
+                  <div class="row multiview-image">
+                    <img src="http://puridiom.com/backend_resources/images/multiview/foundation-multiview.jpg"></img>
+                  </div>
+                  <div class="row">
+                  <div class="twelve columns">
+                    <div class="slider-cta multiview-cta">
+                      <a href=" http://info.puridiom.com/5-procurement-best-practices-you-can-implement-today?utm_campaign=Multiview%20Targeted%20Banners&utm_medium=banner&utm_source=Best%20Practices%20article" class="black nounderline sans text-29" style="font-weight: normal;">
+                        Aligned Best Practices
+                      </a>
+                    </div>
+                  </div>
+                  </div>
+            </div>
+            <div class="three columns" style="padding-left: 20px; padding-right:20px;">
+
+                <div class="row multiview-image">
+                  <img src="http://puridiom.com/backend_resources/images/multiview/climbers-multiview.jpg"></img>
+                </div>
+                <div class="row">
+                <div class="twelve columns">
+                  <div class="slider-cta multiview-cta">
+                    <a href=" http://info.puridiom.com/the-best-buying-decision-requires-collaboration?utm_campaign=Multiview%20Targeted%20Banners&utm_medium=banner&utm_source=collaboration%20report" class="black nounderline sans text-25" style="line-height: 30px; font-weight: normal;">
+                      Supplier and Stakeholder Collaboration
+                    </a>
+                  </div>
+                </div>
+                </div>
+          </div>
+          </div>
+
+          </section>
+          <section class="container grey-section" style="padding-top: 20px;">
+            <article class="row">
+              <h2 class="text-39 black bold sans caps center" style="
+              margin-bottom: 2%;">Powerful P2P Transformations for all Industries</h2>
+              <article class="row white-menu hovers" style="
+              width: 96%;
+              margin-right: -7%;
+              margin-left: 0%;">
+              <div class="two columns">
+                <div class="helpHover" data-tooltip="Puridiom helps insurance companies of all types keep costs down by keeping spend visible and under control."><img alt="Insurance" src="http://puridiom.com/backend_resources/images/icons/industries/umbrella_open.png" /><hr class="black-line" />
+                  <div class="text">Insurance</div>
+                </div>
+              </div>
+              <div class="two columns">
+                <div class="helpHover" data-tooltip="Data management is crucial for financial organizations.  Puridiom tracks all transactions and keeps costs in line for all departments."><img alt="Financial" src="http://puridiom.com/backend_resources/images/icons/industries/currency_dollar.png" /><hr class="black-line" />
+                  <div class="text">Financial</div>
+                </div>
+              </div>
+              <div class="two columns">
+                <div class="helpHover" data-tooltip="Big city or small town, smart procurement is essential to maintaining budgets.  Puridiom can help your government entity stay in control."><img alt="Government" src="http://puridiom.com/backend_resources/images/icons/industries/auction_hammer.png" /><hr class="black-line" />
+                  <div class="text">Government</div>
+                </div>
+              </div>
+              <div class="two columns">
+                <div class="helpHover" data-tooltip="Technology companies are busy developing the next best device.  Let Puridiom take care of the keeping procurement under control and budgets aligned."><img alt="Technology" src="http://puridiom.com/backend_resources/images/icons/industries/robot.png" /><hr class="black-line" />
+                  <div class="text">Technology</div>
+                </div>
+              </div>
+              <div class="two columns">
+                <div class="helpHover" data-tooltip="Puridiom helps healthcare organizations track and control spend, especially critical when every healthcare dollar must be accounted for. "><img alt="Healthcare" src="http://puridiom.com/backend_resources/images/icons/industries/stethoscope.png" /><hr class="black-line" />
+                  <div class="text">Healthcare</div>
+                </div>
+              </div>
+            </article>
+            <article class="row white-menu hovers" style="
+            width: 96%;
+            margin-right: -7%;
+            display: inline-block;
+            float: left;">
+            <div class="two columns">
+              <div class="helpHover" data-tooltip="Puridiom tracks all spend, direct and indirect, helping manufacturing organizations to account for all spend transactions."><img alt="Manufacturing" src="http://puridiom.com/backend_resources/images/icons/industries/industrial_machine.png" />
+                <hr class="black-line" />
+                <div class="text">Manufacturing</div>
+              </div>
+            </div>
+            <div class="two columns">
+              <div class="helpHover" data-tooltip="Oil, Gas, and other energy sources have unique procurement needs.  Puridiom handles transactions quickly, accurately and reliably."><img alt="Energy" src="http://puridiom.com/backend_resources/images/icons/industries/lightbulb_on.png" /><hr class="black-line" />
+                <div class="text">Energy</div>
+              </div>
+            </div>
+            <div class="two columns">
+              <div class="helpHover" data-tooltip="Every retail organization has its own way of buying.  Puridiom can provide the tools to make purchasing more efficient and cost effective."><img alt="Retail" src="http://puridiom.com/backend_resources/images/icons/industries/shopping_bag_full.png" /><hr class="black-line" />
+                <div class="text">Retail</div>
+              </div>
+            </div>
+            <div class="two columns">
+              <div class="helpHover" data-tooltip="Truly unique purchases are made in the entertainment industry, and often at a moment’s notice.  Puridiom builds last minute purchasing and budget fluctuations to accommodate and track volatile purchasing."><img alt="Entertainment" src="http://puridiom.com/backend_resources/images/icons/industries/masks.png" /><hr class="black-line" />
+                <div class="text">Entertainment</div>
+              </div>
+            </div>
+            <div class="two columns">
+              <div class="helpHover" data-tooltip="Schools and higher education learning centers struggle to provide the best quality education at affordable tuitions.  Puridiom can assist by providing educators with the best procurement options."><img alt="Education" src="http://puridiom.com/backend_resources/images/icons/industries/graduation_hat.png" /><hr class="black-line" />
+                <div class="text">Education</div>
+              </div>
+            </article>
+            <div class="two columns cta" style="float: left; margin-top: -14%; margin-left: -4%;">
+              <a href="#scrollToBottom">
+                <h4>Take Control!</h4>
+                <hr class="black-line">
+                Talk to a Procurement Specialist Today
+              </a>
+            </div>
+          </section>
+
+          <section class="container blue-section">
+            <article class="row">
+              <h2 class="text-39 white bold sans caps center">Platforms</h2>
+              <h3 class="text-30 black bold sans center">Puridiom Leads the Industry in Platform Options</h3>
+              <hr class="black-line extraSpace" />
+            </article>
+              <article class="row white-menu">
+                <div class="twelve columns">
+                  <div class="six columns">
+                    <div class="helpHover bigger"><img alt="Cloud" src="http://post.puridiom.com/cdnr/40/acton/attachment/5671/f-01bf/1/-/-/-/-/image.png" /><hr class="black-line" />
+                      <div class="text">Cloud</div>
+                    </div>
+                  </div>
+                  <div class="six columns">
+                    <div class="helpHover bigger"><img alt="On-Premise" src="http://post.puridiom.com/cdnr/40/acton/attachment/5671/f-01c0/1/-/-/-/-/image.png" /><hr class="black-line" />
+                      <div class="text">On-Premise</div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="row white-menu">
+                <div class="twelve columns">
+                  <div class="six columns">
+                    <h4 class="text-29 white bold sans shadow caps">Cloud Implementation</h4>
+                    <p class="subheading orange">Quicker Deployment<br />Lower Overall Cost</p>
+                    <p class="black">Cloud deployments are quicker to deploy, enable you to stay current with automatic updates, provide independence from IT, improve usability, and lower overall cost of ownership. No hardware or maintenance is required by the organization, including security. Fee is subscription based.</p>
+                  </div>
+                  <div class="six columns">
+                    <h4 class="text-29 white bold sans shadow caps">On-Premise Implentation</h4>
+                    <p class="subheading orange">More Control of Software, Fewer Integration Challenges</p>
+                    <p class="black">On-Premise deployments require more investment up-front, to include initial implementation and license fees, hardware infrastructure acquisition and maintenance costs, administrative and internal resource costs for support. However, if organization already has infrastructure in place and has a need to keep data behind the firewall for security purposes, this deployment may be the way to go. Other benefits include control of software and fewer integration challenges.</p>
+                  </div>
+                </div>
+              </article>
+              <article class="row">
+                <div class="twelve columns cta landingPageCTA">
+                  <a href="#scrollToBottom">
+                    <h4>Take Control!</h4>
+                  </a>
+                </div>
+              </article>
+            </section>
+            <section class="container blue-section" style="padding-top: 0px;">
+                <article class="row">
+                  <article class="row">
+                    <h2 class="text-39 white bold sans caps center" style="margin-bottom: 15px;" id="scrollToBottom">Get More Information Now</h2>
+                    <br />
+                    </article>
+                    <div class="three columns"></div>
+                    <div class="row">
+                    <div class="six columns" style="text-align:center">
+                       <!--[if lte IE 8]>
+                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+                        <![endif]-->
+                        <script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/v2.js"></script>
+                        <script>
+                          hbspt.forms.create({
+                            portalId: '736525',
+                            formId: 'b5e26450-b383-4bda-b09b-70d3f05176d1'
+                          });
+                        </script>
+                    </div>
+                    </div>
+                    <div class="three columns"></div>
+
+                    <div class="quote" style="float: left;">
+                      <p class="words">"Companies using eProcurement solutions, on average, increased spend under management by 36%. Requisition-to-order cycle times were reduced by 75%."</p>
+                      <p class="atrib">- Aberdeen Group</p>
+                    </div>
+                  </article>
+                </section>
+                <!--JS-->
+                <!--Angular Version 1.2.17-->
+                <script src="backend_resources/angular/angular.js" type="text/javascript"></script>
+                <script src="backend_resources/angular/angular-animate.js" type="text/javascript"></script>
+                <!--angular animate is necessary to make the slider animate-->
+                <script src="backend_resources/angular/controllers.js" type="text/javascript"></script>
+                <script src="backend_resources/angular/resourcesController.js" type="text/javascript"></script>
+        {{ standard_footer_includes }}
+    </body>
+</html>
