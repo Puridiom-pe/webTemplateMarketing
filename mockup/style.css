@@ -79,57 +79,71 @@ h2{
 	background:#143f8e;
 
 }
-.blanco{
+.bmenu_title{
 	color: #fff;
-	width:80%;
-	margin:0 auto;
-	margin-top:15px;
+	margin:40px ;
+	font-size: 1.5em;
 }
 .puridiom-man{
-	width:100%;
-	height:600px;
+	width:80%;
+	margin-top: 40px;
 }
-#panel{
-	background:url(./images/descarga.jpg);
+.panel{
+	background:url(./images/conference-room-blur.jpg);
 	background-size:cover;
-	height:600px;
 }
-.cuadrado{
-	 width:100%;
-	 height:500px;
-	 margin-top:50px; 
-     background:rgba(255,165,0,0.8);
-     
+.panel h2:first-child{
+	margin-top: 150px;
+	padding: 20px;
+	background: rgba(255,255,255,0.8);
 }
-
-
-
-.caja-triangulo{
-    padding:0;
+.panel h2.subtitle_panel{
+    color: #FFF;
+    background: rgba(20, 63, 142, 0.6);
+    padding: 14px 0;
+    font-size: 1.7em;
+    width: 85%;
+    margin-top:10px;
+    float:right;
 }
-.caja-cuadrado{
-	padding:0;
+.panel .date {
+    padding: 5px 18px 5px 80px;
+    font-family: 'Cabin', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    background: #1BB8FF;
+    color: #FFF;
+    position: absolute;
+    top: 50px;
+    right: 15px;
+    background: -webkit-linear-gradient(115deg,transparent 14%,#F3A53F 0);
+    background: -o-linear-gradient(115deg,transparent 14%,#F3A53F 0);
+    background: -moz-linear-gradient(115deg,transparent 14%,#F3A53F 0);
+    background: linear-gradient(115deg,transparent 14%,#F3A53F 0);
 }
-.cuadrado h3:first-child
-{
-	padding:40px 10px 10px;
-	font-size:21px;
+.panel .registration{
+	float:right;
+	width: 50%;	
 }
-.cuadrado h3:nth-child(2){
-	padding:10px;
-	font-size:23px;
+.panel .registration ul{
+	list-style: none;
 }
-.cuadrado h3:nth-child(3){
-	padding:10px;
-	font-size:21px;
+.panel .registration ul li::before {
+	background-image: url('images/check.svg');
+    background-size: 10px 30px;
+    display: inline-block;
+    width: 10px; 
+    height: 20px;
+    margin-right: 8px;	
+    content:" ";
 }
-.cuadrado h3:nth-child(5){
-	padding:10px;
-	font-size:21px;
+.panel p{
+	width: 50%;
+	float: left;
+	margin-top: 85px;
 }
 .about {
     position: relative;
-    background-color: #DFDFDF;
     background-repeat: no-repeat;
     background-image: url(images/semicirculo3.png);
     background-size: 80%;
