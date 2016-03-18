@@ -1,0 +1,250 @@
+/*----------------------------------------------------------------------------------------------------*/
+/*---------------------------------------- Basic Page Styling ----------------------------------------*/
+/*----------------------------------------------------------------------------------------------------*/
+* { .boxSizing(); }
+html, body, .container { height: 100%; }
+html {
+	@media @mobile { font-size: 0.95em; }
+	@media @tablet { font-size: @body; }
+	font-size:1.10em;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+}
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 0.85em;
+}
+
+.container {
+	height: auto;
+	min-height: 100%;
+	.content {
+		width: 100%;
+		.header {
+			height: 4em;
+			background: @colorMenu;
+			.displayFlex();
+			.logo {
+				height:100%;
+				.flex(1 1 30%);
+			}
+			.menu {
+				.flex(1 1 70%);
+				height:100%;
+				max-width:960px;
+				width:90%;
+				list-style-type:none;
+				padding:0.5em;
+				color: @light;
+				.displayFlex();
+				.alignItems(center,center);
+				.flexJustify(flex-end, flex-end);	
+				.flexDirection(column);
+				.itemsMenu {
+					margin: 0 0.5em;
+				}
+				
+			}
+		}
+		.main {
+			height: 100%;
+			min-height: 600px;
+			background: @backgroundPrimary;
+			.boxTitle {
+				background: @backgroundTerciary;
+				padding: 2em;
+				width: 60%;
+				position: absolute;
+				top: 6em;
+				right: 2em;
+				@media @mobile {
+					padding: 1em;
+					top: 4em;
+					width: 100%;
+					right: 0;
+				}
+				.borderRadius(0.3em);
+				.textTitle {
+					font-size: @title;
+					transform: uppercase;
+					font-weight: bold;
+					.displayFlex();
+					.flexJustify(center, center);
+					text-align: center;
+					@media @mobile {
+						font-size: @body;
+					}
+				}
+				.textDescrip {
+					font-size: 1em;
+					.displayFlex();
+					.flexJustify(center, center);
+					text-align: center;
+					@media @mobile {
+						font-size: @caption;
+					}
+				}
+			}
+			.puridiomMan {
+				background: url(images/puridiomMan.png)no-repeat;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				bottom: -10em;
+			}
+			
+			.boxTitleDesc {
+				background: @backgroundSecundary;
+				padding: 2em;
+				width: 60%;
+				position: absolute;
+				bottom: 2em;
+				right: 2em;
+				.borderRadius(0.3em);
+				@media @mobile {
+					padding: 1em;
+					width: 100%;
+					right: 0;
+					bottom: 0;
+				}
+				.textTitle {
+					transform: uppercase;
+					font-weight: bold;
+					font-size: @title;
+					.displayFlex();
+					.flexJustify(flex-start, flex-start);
+					@media @mobile {
+						font-size: @body;
+					}
+				}
+				.textDescrip {
+					font-size: @body;
+					.displayFlex();
+					.flexJustify(flex-start, flex-start);
+					@media @mobile {
+						font-size: @caption;
+					}
+				}
+			}
+		}
+		.timeCalendar {
+			height: 100%;
+			background: @light;
+			.displayFlex();
+			.portletLeft {
+				.flex(1 1 70%);
+				background: @backgroundSecundary;
+			}
+			.portletRight {
+				.flex(1 1 40%);
+			}
+		}
+		.about {
+			height: 100%;
+			background: #fafcfc;
+			.titleAbout, .descAbout { 
+				text-align: center;
+				text-transform: uppercase;
+			}
+			.titleAbout {
+				font-size: @display;
+				padding: 1.5em;
+				.text {
+					color: @color500;
+				}
+				@media @mobile {
+					padding: 0.2em;
+					font-size: @title;
+				}
+			}
+			.descAbout {
+				font-size: @body;
+			}
+			.items {
+				font-size: @body;
+				text-transform: uppercase;
+				height: 2em;
+				border: 2px solid @backgroundSecundary;
+				border-width: 0 0 0 2px;
+				padding: 1em;
+				margin: 1em 4em;
+				.displayFlex();
+				.alignItems(center,center);
+				color: @colorText;
+			}
+		}
+		.media {
+			height: 100%;
+			background: @colorMenu;
+			.displayFlex();
+			.flexDirection(column);
+			.btnPortlet {
+				.displayFlex();
+				.flex(1 1 100%);
+				max-height: 3em;
+				.flexJustify(center, center);
+				.alignItems(center,center);
+				margin-top: 1em;
+				.btnLink {
+					.displayFlex();
+					.alignItems(center,center);
+					.flexJustify(center, center);
+					color: #ddd;
+					font-size: @subHead;
+					width: 10em;
+					cursor: pointer;
+					.transition(0.3s);
+					margin: 0 2em;
+					@media @mobile {
+						margin: 0;
+						width: 100%;
+					}
+					&:hover {
+						color: @backgroundSecundary;
+						.primaryIconColor {
+							fill: @backgroundSecundary;
+							.transition(0.3s);
+						}
+					}
+					object, svg {
+						width: 1.2em;
+						height: 1.2em;
+						margin: 0 0.5em;
+					}
+					.primaryIconColor {
+						fill: #ddd;
+					}
+				}
+			}
+			
+			.galery {
+				.displayFlex();
+				.flexJustify(space-around, space-around);
+				height: 100%;
+				min-height: 20em;
+				@media @mobile {
+					.displayFlex();
+					.flexDirection(column);
+				}
+				.imgMedia {
+					.flex(1 1 30%);
+					background: @backgroundPrimary;
+					margin: 1em;
+					@media @mobile {
+						.flex(1 1 100%);
+						height: 100%;
+					}
+				}
+			}
+		}
+	}
+	
+	.footer {
+		height: 3em;
+		background: @color100;
+	}
+}
+
