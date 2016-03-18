@@ -8,291 +8,119 @@
 /*----------------------------------------------------------------------------------------------------*/
 /*---------------------------------------- Basic Page Styling ----------------------------------------*/
 /*----------------------------------------------------------------------------------------------------*/
-/** { .boxSizing(); }
-html, body, .container { height: 100%; }
-html {
-	@media @mobile { font-size: 0.95em; }
-	@media @tablet { font-size: @body; }
-	font-size:1.10em;
-	margin: 0px;
-	padding: 0px;
-	width: 100%;
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  
 }
-body {
-	margin: 0px;
-	padding: 0px;
-}
-
+html,
+body,
 .container {
-	height: auto;
-	min-height: 100%;
-	.content {
-		width: 100%;
-		.header {
-			height: 4em;
-			
-			.logo {
-			
-			}
-			
-			.menu {
-			
-			}
-		}
-		
-		.main {
-		
-		}
-		
-		.timeCalendar {
-		
-		}
-		
-		.about {
-		
-		}
-		
-		.media {
-		
-		}
-	}
-	
-	.footernNew {
-	
-	}
-}*/
-.italic {
-    font-style: italic;
+  height: 100%;
 }
-h2{
-	color: #143f8e;		
-}
-.margin-less{
-	margin:0;
-}
-.logo{
-	width:100%;
-	height:100px;
-	
-}
-.titulo-azul{
-	background:#143f8e;
-
-}
-.blanco{
-	color: #fff;
-	width:80%;
-	margin:0 auto;
-	margin-top:15px;
-}
-.puridiom-man{
-	width:100%;
-	height:600px;
-}
-#panel{
-	background:url(./images/descarga.jpg);
-	background-size:cover;
-	height:600px;
-}
-.cuadrado{
-	 width:100%;
-	 height:500px;
-	 margin-top:50px; 
-     background:rgba(255,165,0,0.8);
-     
-}
-
-
-
-.caja-triangulo{
-    padding:0;
-}
-.caja-cuadrado{
-	padding:0;
-}
-.cuadrado h3:first-child
-{
-	padding:40px 10px 10px;
-	font-size:21px;
-}
-.cuadrado h3:nth-child(2){
-	padding:10px;
-	font-size:23px;
-}
-.cuadrado h3:nth-child(3){
-	padding:10px;
-	font-size:21px;
-}
-.cuadrado h3:nth-child(5){
-	padding:10px;
-	font-size:21px;
-}
-.about {
-    position: relative;
-    background-color: #DFDFDF;
-    background-repeat: no-repeat;
-    background-image: url(images/semicirculo3.png);
-    background-size: 80%;
-    background-position: center 255px;
-    padding: 30px;
-}
-.about .description{
-    width: 70%;
-    margin: 5px auto 30px;
-    font-size: 1.2em;	
-}
-.about .rules_img {
-  position: absolute;
-  left: calc(50% - 128px);
-  width: 230px;
-  bottom: 3%;
-}
-.rules div {
-  background: -webkit-linear-gradient(#ffffff, #dfdfdf);
-  background: -o-linear-gradient(#ffffff, #dfdfdf);
-  background: -moz-linear-gradient(#ffffff, #dfdfdf);
-  background: linear-gradient(#ffffff, #dfdfdf);
-  min-height: 150px;
-  margin-top: 30px;
-  display: table;
-  border-radius: 10px;
-}
-.rules .content {
-  display: table-cell;
-  vertical-align: middle;
-  padding: 0 10px;
-}
-.rules .content h3{
-  color:#8BBC21;
-  font-size: 1.3em;
-}
-.rules .content p{
-  font-size: 0.9em;
-}
-img {
+html {
+  /* Use the html font-size to change the font-size for the entire appication */
+  font-size: 1.10em;
+  margin: 0px;
+  padding: 0px;
   width: 100%;
 }
-.navbar {
-  min-height: 75px;
-  background: #143f8e;
-  border-bottom: 2px solid #ffffff;
+@media (max-width: 640px) {
+  html {
+    font-size: 0.95em;
+  }
 }
-.navbar .menu {
-  margin: 25px 0;
+@media (max-width: 990px) and (min-width:640px) {
+  html {
+    font-size: 1em;
+  }
 }
-.navbar .menu li {
-  display: inline-block;
-  margin-right: 20px;
+body {
+  margin: 0px;
+  padding: 0px;
 }
-.navbar .menu li a {
-  color: #ffffff;
-  text-decoration: none;
+.container {
+  height: auto;
+  min-height: 100%;
 }
-.presentation {
-  margin-top: 75px;
-  background: #eee;
-  background-size: cover;
-  padding: 25px 0;
-  color: #ffffff;
+.container .content {
+  width: 100%;
 }
-.presentation .bgtext {
-  background: rgba(0, 0, 0, 0.6);
-  margin: 1.5em 0;
+.container .content .header {
+  height: 4em;
 }
-.presentation .objetivo {
-  min-height: 4em;
+.row{
+ margin:0;
 }
-
-
-.media{
-	display: block;	
+/*seccion agenda*/
+.caja-agenda{
+  width:60%;  
+  margin:0 auto;
+  cursor: pointer;
+  margin-top:20px;
+  border:solid 1px #22428d;
+  border-bottom:none;
 }
-.media-img{
-	display: block;
-	background-color:#809AB1; 
-	padding: 20px;
-	margin: 0 auto;
-	border-top: 2px solid #FFF;
-}
-.media-imagen{
-	text-align: center;
-	padding: 4px;
-	border-radius: 4px;
-	background-color: #C0CDD8;
-	width: 350px;
-	margin: 20px;
-	overflow:hidden;
-}
-.media-imagen img{
-	width: 100%;
-	border-radius: 4px;
-}
-.tags{
-	background-color: #DFDFDF;
-	text-align: center;
-}
-.tag1{
-	padding: 10px;
-	color: #fff;
-	margin: 20px;
-	border-radius: 4px;
-	width: 200px;
-	text-align: center;
-	
-}
-.tags a{
-	text-decoration: none;
-	color: #fff;
-	transition: color 1s;
-}
-.tags .i_media{
-	width: 40px;
-	margin-right:10px;
-}
-.tags button{
-	background-color:#143F8E;
-	color: #fff;
-	font-weight: bold;
-	padding: 5px 22px;
-    margin: 15px;
-    border-radius: 8px;
-	width: 150px;
-}
-.media h2{
-	color:#143F8E;
-	text-align: center;
-}
-.media-imagen img:hover{
-	transform: scale(1.1);
-	border-radius: 4px;
-}
-.opc{
-	display: inline-block;
+#titulo-agenda{
+  background:#22428d;
+  padding:10px 0;
+  color:white;
+  text-align:center;
 }
 
-	
-footer{
-	background:#143f8e;
-	color:#FFF;
-}
-footer .social{
-    -webkit-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    display: -webkit-flex;
-    display: flex;
-    width:100%;
-    max-height: 150px;
-    justify-content: center;
-}
-footer .social .s_item{	
-	display: -webkit-flex;
-    display: flex;
-    width:8%;
-    justify-content: center;
-}
-footer .social .s_item .social_img{	
-	width: 50px;
-	height: 50px;
-	margin:25px 0;
-}
+#fecha-agenda{
+  color:#f4a641;
+  padding-left:90px;
+  font-size:22px;
+  border-bottom:solid 1px #f4a641;
 
+}
+.caja-img{
+  width:60%;
+  height:200px;
+  margin:0 auto;
+  margin-bottom:10px;
+
+}
+.caja-img img{
+  width:100%;
+  height:200px;
+
+}
+.caja-agenda p:first-child{
+  padding:10px 0 6px 0;
+  text-align:center;
+  font-size:15px;
+  text-transform:uppercase;
+  font-weight:bold;
+  color:#22428d;
+}
+.caja-agenda p:nth-child(3){
+  padding:10px 20px;
+ text-align:center;
+  background:#22428d;
+  margin-bottom:0;
+  color: white;
+
+}
+.caja-agenda p:nth-child(4){
+ 
+  font-weight:bold;
+   margin-bottom:0;
+   text-align:center;
+  background:#22428d;
+  color: white;
+
+}
+.caja-agenda p:nth-child(5){
+  padding:0 60px;
+  font-size:12px;
+  margin-top:0;
+  text-align:center;
+  padding-bottom:10px;
+  background:#22428d;
+  color: white;
+
+}
+/*aqui termina agenda*/
