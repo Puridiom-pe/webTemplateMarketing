@@ -477,3 +477,89 @@ footer .social .s_item .social_img{
 
 }
 /*aqui termina agenda*/
+/*media*/
+/**{
+	outline: 1px solid red;
+}*/
+.tags-group{
+	text-align: center;
+	background-color:#007AAF;
+	padding: 10px;
+}
+.opc{
+	display:block;
+	width: 200px;
+	margin: 20px 40px;
+}
+.tags-group .opc span{
+	font-size: 50px;
+}
+.opc p, .opc h4{
+	margin:0;
+	color: #fff;
+}
+.opc  a{
+	color: #fff;
+	transition: color 1s;
+	text-decoration: none;
+}
+.opc a:hover{
+	color: #143F8E;
+	font-weight: bold;
+}
+.icono{
+	vertical-align: middle;
+	color: #fff;
+}
+.oculto {
+ 	display: none;
+ 	background: red;
+ 	font-size: 14px;
+    padding: 0;
+ }
+.opc{
+	display: inline-block;
+}
+.campo{
+	padding: 20px;
+
+	
+}
+#texto1, #texto2, #texto3{
+	display: none;
+}
+.media-imagen{
+	padding: 30px;
+}
+.contenedor a:hover{
+	opacity: 0.5;
+}
+.contenedor a{
+	text-decoration: none;
+}
+.contenedor img{
+	border-top-left-radius:8px;
+	border-top-right-radius:8px;
+}
+.contenedor{
+	border-bottom-left-radius:8px;
+	border-bottom-right-radius:8px;
+	border-bottom: 5px solid #fff;
+}
+.contenedor:hover{
+	border-bottom: 5px solid #007AAF;
+}
+.contenedor:hover .descripcion{
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+.descripcion{
+	background-color: #F48E12;
+	padding: 15px;
+	text-align: center;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	color: #fff;
+}
+
+/*media end*/
