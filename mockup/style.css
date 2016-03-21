@@ -127,14 +127,10 @@ h2{
 .panel .registration ul, .download ul{
 	list-style: none;
 }
-.panel .registration ul li::before {
-	background-image: url('images/check.svg');
-    background-size: 10px 30px;
-    display: inline-block;
-    width: 10px; 
-    height: 20px;
-    margin-right: 8px;	
-    content:" ";
+.panel .registration ul li {
+    background: url('images/check.svg') no-repeat;
+    padding-left: 25px;
+    background-size: 15px;
 }
 .panel .download{
 	width: 60%;
@@ -145,14 +141,11 @@ h2{
     padding-left: 12px;
     text-align: left;
 }
-.panel .download ul li::before {
-	background-image: url('images/download.svg');
-    background-size: 10px 30px;
-    display: inline-block;
-    width: 10px; 
-    height: 20px;
-    margin-right: 8px;	
-    content:" ";
+.panel .download ul li {
+    background: url('images/download.svg') no-repeat 0;
+    padding-left: 25px;
+    background-size: 18px;
+    line-height: 25px;
 }
 .about {
     position: relative;
